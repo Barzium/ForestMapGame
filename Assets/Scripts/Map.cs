@@ -4,16 +4,26 @@ using UnityEngine;
 using System;
 
 
+[Serializable] public class MapParams
+{
+    public uint chunksPerLine;
+    public float chunkSize;
+}
 public static class Map
 {
-    public static uint mapSize = 8;
-    public static Chunk[,] map = new Chunk[mapSize,mapSize];
+    public static uint chunksPerLine;
+    public static float chunkSize;
+    public static Chunk[,] map;
 
-    public static void GenerateMap()
+    public static void GenerateMap(MapParams mapParams)
     {
-        for (int column = 0; column < mapSize; column++)
+        chunksPerLine = mapParams.chunksPerLine;
+        chunkSize = mapParams.chunkSize;
+        map = new Chunk[chunksPerLine, chunksPerLine];
+
+        for (int column = 0; column < chunksPerLine; column++)
         {
-            for (int row = 0; row < mapSize; row++)
+            for (int row = 0; row < chunksPerLine; row++)
             {
                 Chunk chunk = new Chunk(ChunkType.EMPTY, Variant.BLUE, new Position(column, row));
                 map[column, row] = chunk;
@@ -31,18 +41,33 @@ public static class Map
         }
     }
 
+    public static void InstantiateMap()
+    {
+        for (int row = 0; row < chunksPerLine; row++)
+        {
+            for (int column = 0; column < chunksPerLine; column++)
+            {
+                Chunk chunk = map[row, column];
+                GameObject chunk_prefab = chunk.chunkSO.ChunkPrefabs[0]; //placeholder
+                Vector3 position = new Vector3(chunkSize * row, 0, chunkSize * column);
+                var chunk_object = GameObject.Instantiate(chunk_prefab, position, Quaternion.identity);
+                chunk_object.name = string.Format("Chunk {0},{1}", row, column);
+            }
+        }
+    }
+
     private static bool PlaceChunk(ChunkType type)
     {
         System.Random rand = new System.Random();
         //generate positon
         Position pos = new Position();
-        pos.x = rand.Next(0, (int)(mapSize - 1));
-        pos.y = rand.Next(0, (int)(mapSize - 1));
+        pos.x = rand.Next(0, (int)(chunksPerLine - 1));
+        pos.y = rand.Next(0, (int)(chunksPerLine - 1));
         int infiniteLoopWatchdog = 0;
         while (!IsPositionLegal(pos))
         {
-            pos.x = rand.Next(0, (int)(mapSize - 1));
-            pos.y = rand.Next(0, (int)(mapSize - 1));
+            pos.x = rand.Next(0, (int)(chunksPerLine - 1));
+            pos.y = rand.Next(0, (int)(chunksPerLine - 1));
             infiniteLoopWatchdog++;
             if (infiniteLoopWatchdog > 10000)
             {
@@ -64,7 +89,7 @@ public static class Map
         foreach (Position current_pos in to_check)
         {
             Chunk current_chunk = map[current_pos.x, current_pos.y];
-            if (current_chunk.type != ChunkType.EMPTY)
+            if (current_chunk.Type != ChunkType.EMPTY)
             {
                 return false;
             }
@@ -75,37 +100,21 @@ public static class Map
 
 public class Chunk
 {
-    //public ChunkSO chunkSO;
-    public ChunkType type;
+    public ChunkSO chunkSO;
     public Variant variant;
     public Position position;
 
+    public ChunkType Type { get => chunkSO.type; }
+
     public Chunk(ChunkType _type, Variant _variant, Position _position)
     {
-        type = _type;
         variant = _variant;
         position = _position;
+        chunkSO = GameManager.GetChunkData(_type);
     }
 }
 
-public class ChunkSO: ScriptableObject
-{
-    public ChunkType type;
-    public bool isRiddle;
-    public GameObject ChunkPrefab;
-}
 
-public enum ChunkType
-{
-    EMPTY,
-    GRAVE,
-    CAVE,
-    SHACK,
-    POND,
-    WATER_TOWER,
-    GLADE,
-    CHURCH
-}
 
 public enum Variant
 {
@@ -139,7 +148,7 @@ public class Position
         {
             for (int row = y-1; row <= y+1; row++)
             {
-                if (column >= 0 && column < Map.mapSize && row >=0 && row < Map.mapSize)
+                if (column >= 0 && column < Map.chunksPerLine && row >=0 && row < Map.chunksPerLine)
                 {
                     result.Add(new Position(column, row));
                 }

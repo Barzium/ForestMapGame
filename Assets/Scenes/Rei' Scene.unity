@@ -659,6 +659,10 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.minColor.a
       value: 0.16470589
       objectReference: {fileID: 0}
+    - target: {fileID: 1901880080, guid: fc321af434de3124da3dec8baeb8e583, type: 3}
+      propertyPath: ColorModule.gradient.minGradient.atime2
+      value: 37394
+      objectReference: {fileID: 0}
     - target: {fileID: 634881141902003345, guid: fc321af434de3124da3dec8baeb8e583,
         type: 3}
       propertyPath: m_Name

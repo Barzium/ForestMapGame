@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027143bbe42c62046bd0b5afb5c48b67, type: 3}
   m_Name: Grave
   m_EditorClassIdentifier: 
-  type: 1
+  type: 2
   isRiddle: 1
   ChunkPrefabs:
   - {fileID: 6348326302984997208, guid: 3bdc72af19619534880341397e5cd8d8, type: 3}

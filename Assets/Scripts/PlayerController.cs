@@ -22,14 +22,14 @@ public class PlayerController : MonoBehaviour
     public void GetInput()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
         if (isGrounded && gravityVector.y <0)
-        {
             gravityVector.y = -2f;
-        }
+        
             inputVector = transform.right * Input.GetAxis("Horizontal") +
             transform.forward * Input.GetAxis("Vertical");
 
-        inputVector *= movementSpeed*Time.deltaTime;
+        inputVector *= movementSpeed * Time.deltaTime;
         
         if (playerController != null)
         {

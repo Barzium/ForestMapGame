@@ -6,19 +6,19 @@ public class RedEyesManager : MonoBehaviour
 {
     Animator animator;
     [SerializeField] Transform Player;
-    [SerializeField] Transform[] TreeContainers;
+    [SerializeField] GameObject[] TreeContainers;
     Vector3 newDirection;
-    float offset = 1f;
+    float offset = 2f;
     int lastTree = new int(), currentTree = new int();
     Vector3 direction = new Vector3();
-    float duration = 3f;
+ 
     SpriteRenderer sr;
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        TreeContainers = GameObject.FindGameObjectsWithTag("Tree");
         currentTree = Random.Range(0, TreeContainers.Length);
-        transform.position = TreeContainers[currentTree].position;
         StopCoroutine(SpawnEyes());
         StartCoroutine(SpawnEyes());
     }
@@ -32,15 +32,15 @@ public class RedEyesManager : MonoBehaviour
 
         lastTree = currentTree;
 
-        transform.position = TreeContainers[currentTree].position;
+        transform.position = TreeContainers[currentTree].transform.position + (Player.position.normalized * offset);
     }
 
 
 
     IEnumerator SpawnEyes() {
-        float time;
+
       
-        float duration = 3f;
+        float duration = 5f;
         while (true)
         {
 
@@ -49,17 +49,14 @@ public class RedEyesManager : MonoBehaviour
 
            
             animator.SetTrigger("Eye");
-            time = Time.time;
-
-            while (time + duration > Time.time)
-            {
-                yield return null;
-                SetRotaion();
-            }
+ 
         }
     }
 
-
+    private void FixedUpdate()
+    {
+        SetRotaion();
+    }
     void SetRotaion() {
         direction = transform.position - Player.position;
         newDirection = Vector3.RotateTowards(-transform.up, new Vector3(direction.x, 0, direction.z), 2, 0f);

@@ -36,10 +36,9 @@ public class Spawner : MonoBehaviour
 
     private void SetHighlight(bool state) {
         if (state && !highlighted) {
-            Debug.Log("Spawner Highlighted!");
+
         }
         else if(!state && highlighted) {
-            Debug.Log("Spawner DE-Highlighted!");
         }
         highlighted = state;
     }

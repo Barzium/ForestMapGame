@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027143bbe42c62046bd0b5afb5c48b67, type: 3}
   m_Name: WaterTower
   m_EditorClassIdentifier: 
-  type: 5
+  type: 1
   isRiddle: 1
   ChunkPrefabs:
   - {fileID: 1650706381075013491, guid: 24a66d5e10c1bae42a3b88d592183e40, type: 3}

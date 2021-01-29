@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //Debug purposes
-        if (Input.GetKeyDown(KeyCode.R))
+        /*if (Input.GetKeyDown(KeyCode.R))
         {
             Debug.Log("Refreshing");
             foreach (Transform child in transform)
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
             }
             Map.GenerateMap(mapParams);
             Map.InstantiateMap();
-        }
+        }*/
     }
 
 }

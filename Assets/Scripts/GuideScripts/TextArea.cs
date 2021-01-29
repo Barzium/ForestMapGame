@@ -8,7 +8,7 @@ public class TextArea : MonoBehaviour
     public static TextArea _instance;
     bool textWasChanged = false;
 
-    public virtual void Awake() {
+    public void Awake() {
         if (isActiveAndEnabled) {
             if (_instance == null) {
                 _instance = this;

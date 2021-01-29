@@ -36,7 +36,17 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int a = 1;
+        //Debug purposes
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Debug.Log("Refreshing");
+            foreach (Transform child in transform)
+            {
+                GameObject.Destroy(child.gameObject);
+            }
+            Map.GenerateMap(mapParams);
+            Map.InstantiateMap();
+        }
     }
 
 }

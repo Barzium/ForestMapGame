@@ -25,11 +25,11 @@ public class ChunkPack : ScriptableObject
 public enum ChunkType
 {
     EMPTY,
+    WATER_TOWER,
     GRAVE,
     CAVE,
     SHACK,
     POND,
-    WATER_TOWER,
     GLADE,
     CHURCH
 }

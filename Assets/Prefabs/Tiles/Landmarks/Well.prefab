@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoomTime: 1
-  minimumDragDistance: 0.7
+  minimumDragDistance: 0.2
   minimumDragTime: 2
   screenOffset: 0.1
   zoomable: 1

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4370419903800306938}
   - component: {fileID: 4370419903800306939}
   m_Layer: 0
-  m_Name: Shack 1
+  m_Name: Rockstacking
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,23 +110,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoomTime: 1
-  minimumDragDistance: 0.7
+  minimumDragDistance: 0.4
   minimumDragTime: 2
   screenOffset: 0.1
   zoomable: 0
   discardable: 0
   highlightObject: {fileID: 5550580245710249146}
-  description: '555555
-
-    555555555555
-
-    555555555555555
-
-    55555555555555
-
-    5
-
-'
 --- !u!1 &5550580245710249146
 GameObject:
   m_ObjectHideFlags: 0

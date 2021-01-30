@@ -559,7 +559,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5672826063960036615}
   m_Layer: 0
-  m_Name: Spooky_Empty_Chunk
+  m_Name: PowerPole_Chunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1787,6 +1787,34 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &4393835146418528540
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4423186808699573218}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.7
+  m_Height: 20
+  m_Direction: 1
+  m_Center: {x: 1.3, y: 10, z: -1.5}
+--- !u!136 &2796215131703273805
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4423186809071819538}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.7
+  m_Height: 20
+  m_Direction: 1
+  m_Center: {x: 1.3, y: 10, z: -1.5}
 --- !u!1 &4570763726562300843
 GameObject:
   m_ObjectHideFlags: 0
@@ -3273,6 +3301,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88054a5bc3d3c1f45ab9c576536cddb7, type: 3}
+--- !u!1 &4423186809071819538 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 88054a5bc3d3c1f45ab9c576536cddb7,
+    type: 3}
+  m_PrefabInstance: {fileID: 3576765365069702723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3902791681956315560 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 88054a5bc3d3c1f45ab9c576536cddb7,
@@ -3348,6 +3382,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88054a5bc3d3c1f45ab9c576536cddb7, type: 3}
+--- !u!1 &4423186808699573218 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 88054a5bc3d3c1f45ab9c576536cddb7,
+    type: 3}
+  m_PrefabInstance: {fileID: 3576765365771202227}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3902791681246431576 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 88054a5bc3d3c1f45ab9c576536cddb7,

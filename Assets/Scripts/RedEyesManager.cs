@@ -20,11 +20,13 @@ public class RedEyesManager : MonoBehaviour
         _instance = this;
         animator = GetComponent<Animator>();
         TreeContainers = GameObject.FindGameObjectsWithTag("Tree");
-        currentTree = Random.Range(0, TreeContainers.Length);
+        RestartEyes();
+    }
+    public void RestartEyes() { 
+     currentTree = Random.Range(0, TreeContainers.Length);
         StopCoroutine(SpawnEyes());
         StartCoroutine(SpawnEyes());
     }
-
 
     void SetPosition() {
 

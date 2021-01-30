@@ -4,8 +4,8 @@ public class CodeHandler : MonoBehaviour
 {
     static CodeHandler _instance;
     [SerializeField] InputButton[] btns;
-   [SerializeField] int[] playersInput = new int[4];
-   [SerializeField] int[] password = new int[4];
+   [SerializeField] int[] playersInput = new int[3];
+   [SerializeField] int[] password = new int[3];
     int currentInsert = 0;
     private void Awake()
     {

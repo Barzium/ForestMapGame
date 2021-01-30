@@ -36,13 +36,13 @@ public class TimeManager : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-            RestartSetting();
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //    RestartSetting();
 
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            Death();
-        }
+        //if (Input.GetKeyDown(KeyCode.Z))
+        //{
+        //    Death();
+        //}
     }
     void Death()
     {

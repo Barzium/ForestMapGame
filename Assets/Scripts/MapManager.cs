@@ -1,7 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
+
+[Serializable]public class Solution{
+    public GameObject prefab;
+    public Variant variant;
+}
 public class MapManager : MonoBehaviour
 {
     public static MapManager instance = null;
@@ -9,9 +15,10 @@ public class MapManager : MonoBehaviour
     [SerializeField] ChunkSO[] chunkPack;
     [SerializeField] MapParams mapParams;
     [SerializeField] GameObject startChunkPrefab;
-    [SerializeField] List<(GameObject, Variant)> graveSolutions;
-    [SerializeField] List<(GameObject, Variant)> churchSolutions;
-    [SerializeField] List<(GameObject, Variant)> gladeSolutions;
+    //[SerializeField] List<(GameObject, Variant)> graveSolutions;
+    [SerializeField] List<Solution> graveSolutions;
+    [SerializeField] List<Solution> churchSolutions;
+    [SerializeField] List<Solution> gladeSolutions;
     [SerializeField] List<GameObject> emptyChunkPrefabs;
     static Dictionary<ChunkType, ChunkSO> allChunks = new Dictionary<ChunkType, ChunkSO>();
 
@@ -94,24 +101,24 @@ public class MapManager : MonoBehaviour
                     if (chunk.Type == ChunkType.CHURCH)
                     {
                         solIndex = rand.Next(churchSolutions.Count);
-                        chunk_prefab = churchSolutions[solIndex].Item1;
-                        churchVar = churchSolutions[solIndex].Item2;
+                        chunk_prefab = churchSolutions[solIndex].prefab;
+                        churchVar = churchSolutions[solIndex].variant;
                     }
                     else
                     {
                         if (chunk.Type == ChunkType.GRAVE)
                         {
                             solIndex = rand.Next(graveSolutions.Count);
-                            chunk_prefab = graveSolutions[solIndex].Item1;
-                            churchVar = graveSolutions[solIndex].Item2;
+                            chunk_prefab = graveSolutions[solIndex].prefab;
+                            churchVar = graveSolutions[solIndex].variant;
                         }
                         else
                         {
                             if (chunk.Type == ChunkType.GLADE)
                             {
                                 solIndex = rand.Next(gladeSolutions.Count);
-                                chunk_prefab = gladeSolutions[solIndex].Item1;
-                                churchVar = gladeSolutions[solIndex].Item2;
+                                chunk_prefab = gladeSolutions[solIndex].prefab;
+                                churchVar = gladeSolutions[solIndex].variant;
                             }
                             else
                             {

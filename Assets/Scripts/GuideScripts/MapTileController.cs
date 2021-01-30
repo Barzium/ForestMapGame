@@ -82,6 +82,8 @@ public class MapTileController : MonoBehaviour
 
     private void StopDrag() {
         beingHeld = false;
+        if (insideBoard)
+            boardManager.PlaySnapSound();
         if (highlighted)
             Destroy(gameObject);
         if (!wasMoved && zoomable && !isRotating && !aTileIsZoomed && !isZoomed)

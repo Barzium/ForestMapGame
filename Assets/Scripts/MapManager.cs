@@ -51,6 +51,7 @@ public class MapManager : MonoBehaviour
         //Map.InstantiateMap();
         InstantiateMap();
         CalculateCode();
+
     }
     // Update is called once per frame
     void Update()
@@ -134,14 +135,14 @@ public class MapManager : MonoBehaviour
         }
     }
 
-    void CalculateCode()
+    public void CalculateCode()
     {
         int[] code = new int[3];
         code[0] = VariantToInt(gladeVar);
         code[1] = VariantToInt(churchVar);
         code[2] = VariantToInt(graveVar);
-        // DELIVER CODE TO CODEPANEL HERE
-
+        // DELIVER CODE TO CODEPANEL HERE - DELIVERED V
+        CodeHandler.GetInstance.RegisterPassword(code);
     }
 
     int VariantToInt(Variant variant)

@@ -15,4 +15,4 @@ MonoBehaviour:
   type: 5
   isRiddle: 0
   ChunkPrefabs:
-  - {fileID: 5544830903856544181, guid: 3f6506ef0ced53a4db35c7b0912eefb5, type: 3}
+  - {fileID: 7477639871583300018, guid: a12623f4b861ac94c988fba4fd08ae8c, type: 3}

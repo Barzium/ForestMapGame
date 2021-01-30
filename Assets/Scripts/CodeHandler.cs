@@ -49,7 +49,7 @@ public class CodeHandler : MonoBehaviour
         ShowAnswer(true);
     }
 
-     void RegisterPassword(int[] password) {
+   public  void RegisterPassword(int[] password) {
       
         if (password.Length == this.password.Length)
          this.password = password;

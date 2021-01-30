@@ -15,17 +15,17 @@ PrefabInstance:
     - target: {fileID: 2175600311782458714, guid: 115981a438357b8479bd8889c68434da,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.35582286
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2175600311782458714, guid: 115981a438357b8479bd8889c68434da,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.03912157
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2175600311782458714, guid: 115981a438357b8479bd8889c68434da,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.7223226
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2175600311782458714, guid: 115981a438357b8479bd8889c68434da,
         type: 3}
@@ -62,10 +62,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4756888746397615610, guid: 115981a438357b8479bd8889c68434da,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5691142028654389302, guid: 115981a438357b8479bd8889c68434da,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6223014471839666688, guid: 115981a438357b8479bd8889c68434da,
         type: 3}
       propertyPath: m_Name
-      value: Cross_Ring_Tombstone
+      value: Cross_Ring_Tombstone Crow Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 115981a438357b8479bd8889c68434da, type: 3}

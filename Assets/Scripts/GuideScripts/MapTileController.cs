@@ -9,8 +9,6 @@ public class MapTileController : MonoBehaviour
     [SerializeField] private bool zoomable;
     [SerializeField] private bool discardable;
     [SerializeField] private GameObject highlightObject;
-    [TextArea]
-    [SerializeField] private string description;
     static bool aTileIsZoomed;
     bool isRotating = false, beingHeld = false, wasMoved = false, isZoomed = false, highlighted = false;
     bool canBeDragged => !isZoomed && !isRotating;
@@ -40,7 +38,7 @@ public class MapTileController : MonoBehaviour
     // Update is called once per frame
     void Update() {
         if (beingHeld && canBeDragged) {
-            transform.position = dragStartPos + (Vector3)(GetworldMousePosition() - mouseDragStartPosition);
+            transform.position = (Vector3)GetworldMousePosition() + Vector3.forward * transform.position.z;
             SetHighlight(boardManager.CheckDiscard(transform.position));
             if (!wasMoved && (Time.time - dragStartTime) >= minimumDragTime)
                 wasMoved = true;
@@ -72,7 +70,6 @@ public class MapTileController : MonoBehaviour
     }
 
     public void StartDrag() {
-        mouseDragStartPosition = GetworldMousePosition();
         dragStartPos = transform.position;
         dragStartTime = Time.time;
         beingHeld = true;
@@ -91,7 +88,7 @@ public class MapTileController : MonoBehaviour
             ZoomIn();
     }
 
-    private void ZoomIn() {
+    public void ZoomIn() {
         isRotating = true;
         aTileIsZoomed = true;
         posBeforeZoom = transform.localPosition;

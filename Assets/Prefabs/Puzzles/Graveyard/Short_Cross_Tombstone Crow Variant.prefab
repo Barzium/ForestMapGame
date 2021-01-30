@@ -99,17 +99,17 @@ PrefabInstance:
     - target: {fileID: 7618794169874996334, guid: 5d51b2876342e224dab42d5e45d38447,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.22152263
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7618794169874996334, guid: 5d51b2876342e224dab42d5e45d38447,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.042000003
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7618794169874996334, guid: 5d51b2876342e224dab42d5e45d38447,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.0935526
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7618794169874996334, guid: 5d51b2876342e224dab42d5e45d38447,
         type: 3}
@@ -149,7 +149,7 @@ PrefabInstance:
     - target: {fileID: 7618794169874996335, guid: 5d51b2876342e224dab42d5e45d38447,
         type: 3}
       propertyPath: m_Name
-      value: Short_Cross_Tombstone
+      value: Short_Cross_Tombstone Crow Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d51b2876342e224dab42d5e45d38447, type: 3}

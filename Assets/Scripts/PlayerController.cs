@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-    [SerializeField] Vector3 startPos;
+   
     Vector3 gravityVector;
     bool isGrounded;
     private void Update() {
@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    public void RestartPosition() {
+    public void RestartPosition( Vector3 startPos) {
 
         transform.position = startPos;
     }

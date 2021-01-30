@@ -51,7 +51,7 @@ public class MapManager : MonoBehaviour
         //Map.InstantiateMap();
         InstantiateMap();
         CalculateCode();
-
+        PlayerSpawner.GetInstance.InitAll();
     }
     // Update is called once per frame
     void Update()

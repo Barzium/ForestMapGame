@@ -15,14 +15,11 @@ public class TimeManager : MonoBehaviour
     float lowestPoint = 0.16f;
     Vector3 startPos = new Vector3();
     public static bool isDead = false;
-    private void Start()
+    private void Awake()
     {
         _instance = this;
-        startPos = candle.position;
-        StopCoroutine(Melting());
-        StartCoroutine(Melting());
-
     }
+
     float endY;
     IEnumerator Melting()
     {
@@ -51,21 +48,28 @@ public class TimeManager : MonoBehaviour
         sr.enabled = false;
         lightTorch.enabled = false;
         RedEyesManager._instance.DeathLocation();
-        StopCoroutine(DeathPanel(true));
-        StartCoroutine(DeathPanel(true));
+        //StopCoroutine(DeathPanel(true));
+        //StartCoroutine(DeathPanel(true));
         isDead = true;
     }
+    bool firstTIme = true;
     public void RestartSetting()
     {
-      
-        LeanTween.reset();
+        _instance = this;
+        startPos = candle.position;
+        if (!firstTIme)
+        {
+          
         LeanTween.moveY(candle.gameObject, candle.position.y + lowestPoint, 1f);
+        } 
+        firstTIme = false;
+         LeanTween.reset();
         anim.enabled = true;
         sr.enabled = true;
         lightTorch.enabled = true;
         StopAllCoroutines(); 
        
-        StartCoroutine(DeathPanel(false));
+       // StartCoroutine(DeathPanel(false));
         StartCoroutine(Melting());
     }
 

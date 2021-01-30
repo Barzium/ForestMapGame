@@ -1,19 +1,22 @@
-﻿using System;
+﻿using UnityEngine.UI;
 using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class TimeManager : MonoBehaviour
 {
-    [SerializeField]Transform candle;
-    [SerializeField]Animator anim;
+    public static TimeManager _instance;
+    [SerializeField] Transform candle;
+    [SerializeField] Animator anim;
     [SerializeField] SpriteRenderer sr;
     [SerializeField] Light lightTorch;
-   [SerializeField] float MaxTime , StartTimeBeforeConsumption;
+    [SerializeField] float MaxTime, StartTimeBeforeConsumption;
+    [SerializeField] Image deathPanel;
     float lowestPoint = 0.16f;
     Vector3 startPos = new Vector3();
     private void Start()
-    {  
+    {
+        _instance = this;
         startPos = candle.position;
         StopCoroutine(Melting());
         StartCoroutine(Melting());
@@ -24,32 +27,66 @@ public class TimeManager : MonoBehaviour
     {
         yield return new WaitForSeconds(StartTimeBeforeConsumption);
 
-      
-         endY =candle.position.y - lowestPoint;
+        endY = candle.position.y - lowestPoint;
 
         LeanTween.moveY(candle.gameObject, endY, MaxTime);
-        
+
         yield return new WaitForSeconds(MaxTime);
         Death();
     }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-        RestartSetting();
+            RestartSetting();
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            Death();
+        }
     }
-    void Death() {
+    void Death()
+    {
         anim.enabled = false;
         sr.enabled = false;
         lightTorch.enabled = false;
+        RedEyesManager._instance.DeathLocation();
+        StopCoroutine(DeathPanel(true));
+        StartCoroutine(DeathPanel(true));
     }
-    public void RestartSetting() {
+    public void RestartSetting()
+    {
+      
         LeanTween.reset();
         LeanTween.moveY(candle.gameObject, candle.position.y + lowestPoint, 1f);
         anim.enabled = true;
         sr.enabled = true;
         lightTorch.enabled = true;
-        StopAllCoroutines();
+        StopAllCoroutines(); 
+       
+        StartCoroutine(DeathPanel(false));
         StartCoroutine(Melting());
     }
- 
+
+
+    IEnumerator DeathPanel(bool toAdd)
+    {
+        yield return new WaitForSeconds(2f);
+        Color color = deathPanel.color;
+        float addAlpha = deathPanel.color.a;
+        while (true)
+        {
+            if (toAdd)
+            {
+                addAlpha += 0.02f;
+            }
+            else
+            {
+                addAlpha -= 0.02f;
+            }
+            addAlpha = Mathf.Clamp(addAlpha, 0, 1f);
+
+            yield return null;
+            deathPanel.color = new Color(color.r, color.g, color.b, addAlpha);
+        }
+    }
 }

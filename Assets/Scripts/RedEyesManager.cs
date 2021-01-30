@@ -1,9 +1,10 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RedEyesManager : MonoBehaviour
 {
+    public static RedEyesManager _instance;
     Animator animator;
     [SerializeField] Transform Player;
     [SerializeField] GameObject[] TreeContainers;
@@ -11,11 +12,12 @@ public class RedEyesManager : MonoBehaviour
     float offset = 2f;
     int lastTree = new int(), currentTree = new int();
     Vector3 direction = new Vector3();
- 
-    SpriteRenderer sr;
+    bool isDead = false;
+
+
     void Start()
     {
-        sr = GetComponent<SpriteRenderer>();
+        _instance = this;
         animator = GetComponent<Animator>();
         TreeContainers = GameObject.FindGameObjectsWithTag("Tree");
         currentTree = Random.Range(0, TreeContainers.Length);
@@ -39,27 +41,45 @@ public class RedEyesManager : MonoBehaviour
 
     IEnumerator SpawnEyes() {
 
-      
+
         float duration = 5f;
         while (true)
         {
 
             yield return new WaitForSeconds(duration);
-            SetPosition();
+            if (!isDead)
+                SetPosition();
 
-           
+
             animator.SetTrigger("Eye");
- 
+
         }
     }
 
     private void FixedUpdate()
     {
-        SetRotaion();
+      
+                SetRotaion();
     }
     void SetRotaion() {
         direction = transform.position - Player.position;
         newDirection = Vector3.RotateTowards(-transform.up, new Vector3(direction.x, 0, direction.z), 2, 0f);
         transform.rotation = Quaternion.LookRotation(newDirection);
     }
+
+
+
+    public void DeathLocation() {
+        isDead = true;
+        transform.position= Player.position + Player.forward * 2f;
+        direction = transform.position - Player.position;
+        newDirection = Vector3.RotateTowards(-transform.up, new Vector3(direction.x, 0, direction.z), 2, 0f);
+        transform.rotation = Quaternion.LookRotation(newDirection);
+
+        animator.SetTrigger("Eye");
+
+      
+    }
+
+  
 }

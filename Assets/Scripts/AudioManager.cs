@@ -47,7 +47,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(SoundLoop("Crow", 5, 0.5f, 0.1f));
+        //StartCoroutine(SoundLoop("Crow", 5, 0.5f, 0.1f));
         StartCoroutine(SoundLoop("Cricket", 7, 0.5f, 0.1f));
         StartCoroutine(StartMusic());
     }

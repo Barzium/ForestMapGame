@@ -4,6 +4,7 @@ using UnityEngine;
 public class BoardManager : MonoBehaviour
 {
     public static BoardManager _instance;
+    AudioSource snapSound;
     [HideInInspector]
     public List<Spawner> spawners = new List<Spawner>();
     public virtual void Awake() {
@@ -15,6 +16,7 @@ public class BoardManager : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        snapSound = GetComponent<AudioSource>();
     }
 
     public bool CheckDiscard( Vector2 pos) {
@@ -24,5 +26,8 @@ public class BoardManager : MonoBehaviour
         }
         return foundDiscard;
     }
+    public void PlaySnapSound() 
+        => snapSound.Play();
+    
 }
 

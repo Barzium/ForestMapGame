@@ -609,6 +609,14 @@ PrefabInstance:
       propertyPath: deathPanel
       value: 
       objectReference: {fileID: 1468824906}
+    - target: {fileID: 1884527993, guid: fc321af434de3124da3dec8baeb8e583, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.0023947994
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884527993, guid: fc321af434de3124da3dec8baeb8e583, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.0008888215
+      objectReference: {fileID: 0}
     - target: {fileID: 1901880080, guid: fc321af434de3124da3dec8baeb8e583, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 5
@@ -989,26 +997,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1801351747721494517, guid: 520b7e25e31ba0042a16f9eaf507cb97,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.013
-      objectReference: {fileID: 0}
-    - target: {fileID: 1801351747721494517, guid: 520b7e25e31ba0042a16f9eaf507cb97,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.166
-      objectReference: {fileID: 0}
-    - target: {fileID: 1801351747721494517, guid: 520b7e25e31ba0042a16f9eaf507cb97,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4824778205772437963, guid: 520b7e25e31ba0042a16f9eaf507cb97,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 81c1860e7800e5340bf8a54c565ba9ea, type: 2}
     - target: {fileID: 5644184617457647690, guid: 520b7e25e31ba0042a16f9eaf507cb97,
         type: 3}
       propertyPath: m_Name

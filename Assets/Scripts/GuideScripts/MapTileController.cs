@@ -9,8 +9,6 @@ public class MapTileController : MonoBehaviour
     [SerializeField] private bool zoomable;
     [SerializeField] private bool discardable;
     [SerializeField] private GameObject highlightObject;
-    [TextArea]
-    [SerializeField] private string description;
     static bool aTileIsZoomed;
     bool isRotating = false, beingHeld = false, wasMoved = false, isZoomed = false, highlighted = false;
     bool canBeDragged => !isZoomed && !isRotating;

@@ -31,6 +31,5 @@ public class MainMenuScript : MonoBehaviour
         while (!asyncLoad.isDone) {
             yield return null;
         }
-
     }
 }

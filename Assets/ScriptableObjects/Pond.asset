@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027143bbe42c62046bd0b5afb5c48b67, type: 3}
   m_Name: Pond
   m_EditorClassIdentifier: 
-  type: 4
-  isRiddle: 1
+  type: 5
+  isRiddle: 0
   ChunkPrefabs:
   - {fileID: 5544830903856544181, guid: 3f6506ef0ced53a4db35c7b0912eefb5, type: 3}

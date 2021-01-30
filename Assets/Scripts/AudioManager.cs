@@ -21,6 +21,13 @@ public class AudioManager : MonoBehaviour
     public static AudioManager _instance;
     public static AudioManager Instance { get { return _instance; } }
     private AudioSource audioSource;
+    public AudioSource FootstepAudioSource;
+    public AudioClip[] walkL, walkR, runL, runR;
+    private bool isMoving = false;
+    private bool isRunning = false;
+    private bool currentFootIsR = true;
+    public const float walkInterval = 300;
+    private float walkTimer = walkInterval;
 
 
     private void Awake()
@@ -40,9 +47,25 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(SoundLoop("Crow", 5, 0.5f, 0.1f));
+        //StartCoroutine(SoundLoop("Crow", 5, 0.5f, 0.1f));
         StartCoroutine(SoundLoop("Cricket", 7, 0.5f, 0.1f));
         StartCoroutine(StartMusic());
+    }
+
+    private void UpdateFootsteps()
+    {
+        if(isMoving)
+        {
+            walkTimer -= isRunning ? 2 : 1;
+            currentFootIsR = !currentFootIsR;
+        }
+
+        if (walkTimer < 0)
+        {
+            PlayFootstepSound(0.5f, 0.1f);
+            walkTimer = walkInterval;
+        }
+
     }
 
     private IEnumerator StartMusic()
@@ -52,6 +75,13 @@ public class AudioManager : MonoBehaviour
             item.Play();
             yield return new WaitForSeconds(1.5f);
         }
+    }
+
+    private void Update()
+    {
+        isMoving = Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0;
+        isRunning = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.LeftShift);
+        UpdateFootsteps();
     }
 
     private IEnumerator SoundLoop(string soundName, int PerMin, float volume = 0.5f, float randPitchDepth = 0)
@@ -75,17 +105,24 @@ public class AudioManager : MonoBehaviour
     }
 
     // RandomDepth should be between 0 and 1
-    public void PlaySound(int soundToPlay, float volume = 0, float PitchRandDepth = 0)
+    public void PlaySound(int soundToPlay, float volume = 0.5f, float PitchRandDepth = 0)
     {
         audioSource.pitch = UnityEngine.Random.Range(1 - PitchRandDepth, 1 + PitchRandDepth);
         audioSource.PlayOneShot(sounds[soundToPlay].audioClip, volume);
     }
 
-    public void PlaySound(string soundToPlay, float volume = 0, float PitchRandDepth = 0)
+    public void PlaySound(string soundToPlay, float volume = 0.5f, float PitchRandDepth = 0)
     {
         AudioClip audioClip = sounds.First(x => x.name.ToLower() == soundToPlay.ToLower()).audioClip;
 
         audioSource.pitch = UnityEngine.Random.Range(1 - PitchRandDepth, 1 + PitchRandDepth);
         audioSource.PlayOneShot(audioClip, volume);
+    }
+
+    public void PlayFootstepSound(float volume = 0.5f, float PitchRandDepth = 0)
+    {
+        FootstepAudioSource.pitch = UnityEngine.Random.Range(1 - PitchRandDepth, 1 + PitchRandDepth);
+        AudioClip[] clips = isRunning? (currentFootIsR ? runR : runL) : (currentFootIsR ? walkR : walkL);
+        FootstepAudioSource.PlayOneShot(clips[UnityEngine.Random.Range(0, clips.Length)], volume);
     }
 }

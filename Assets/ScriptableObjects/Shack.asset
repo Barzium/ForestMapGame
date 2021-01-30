@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027143bbe42c62046bd0b5afb5c48b67, type: 3}
   m_Name: Shack
   m_EditorClassIdentifier: 
-  type: 3
+  type: 4
   isRiddle: 1
   ChunkPrefabs:
   - {fileID: 588329037771746406, guid: 50765db0523345e459ec51187f37c61f, type: 3}

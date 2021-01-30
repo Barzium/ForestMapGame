@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-
+  [SerializeField] Vector3 startPos;
     Vector3 gravityVector;
     bool isGrounded;
     private void Update()
@@ -32,10 +32,6 @@ public class PlayerController : MonoBehaviour
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hitInfo, 20f) && hitInfo.collider.transform.TryGetComponent<InputButton>(out InputButton inpt))
             inpt.PushTheButton();
-
-            
-           
-        
     }
 
     public void GetInput()
@@ -66,6 +62,12 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+    }
+
+
+    public void RestartPosition() {
+
+        transform.position = startPos;
     }
 
 }

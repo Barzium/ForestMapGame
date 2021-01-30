@@ -8,19 +8,35 @@ using System;
 {
     public uint chunksPerLine;
     public float chunkSize;
+    public int startx;
+    public int starty;
 }
 public static class Map
 {
     public static uint chunksPerLine;
     public static float chunkSize;
+    public static Position startPosition;
     public static Chunk[,] map;
     private static System.Random rand = new System.Random();
     private static List<Position> allPositions = new List<Position>();
+
+    private static int mapGenWatchdog = 0;
+    private static (Position,ChunkType)[] defaultMap =
+    {
+        (new Position(7,5), ChunkType.WATER_TOWER), //watertower
+        (new Position(2,5),ChunkType.GRAVE), //grave
+        (new Position(5,1),ChunkType.CAVE), //cave
+        (new Position(5,7),ChunkType.SHACK), //shack
+        (new Position(0,2),ChunkType.POND), //well/pond
+        (new Position(5,4),ChunkType.GLADE), //glade/clearing
+        (new Position(2,1),ChunkType.CHURCH) //church
+    };
 
     public static void GenerateMap(MapParams mapParams)
     {
         chunksPerLine = mapParams.chunksPerLine;
         chunkSize = mapParams.chunkSize;
+        startPosition = new Position(mapParams.startx, mapParams.starty);
         map = new Chunk[chunksPerLine, chunksPerLine];
 
         for (int column = 0; column < chunksPerLine; column++)
@@ -34,7 +50,7 @@ public static class Map
                 allPositions.Add(new Position(column, row));
             }
         }
-
+        mapGenWatchdog = 0;
         ChunkType[] chunkTypes = (ChunkType[])Enum.GetValues(typeof(ChunkType));
         int index = 0;
         if(!PlaceChunk(chunkTypes, index))
@@ -53,14 +69,41 @@ public static class Map
                 GameObject chunk_prefab = chunk.chunkSO.ChunkPrefabs[0]; //placeholder
                 Vector3 position = new Vector3(chunkSize * row, 0, chunkSize * column);
                 //var chunk_object = GameObject.Instantiate(chunk_prefab, position, Quaternion.identity);
-                var chunk_object = GameObject.Instantiate(chunk_prefab, position, Quaternion.identity, GameManager.instance.transform); //DEBUG
+                var chunk_object = GameObject.Instantiate(chunk_prefab, position, Quaternion.identity, MapManager.instance.transform); //DEBUG
                 chunk_object.name = string.Format("Chunk {0},{1}", row, column);
             }
         }
     }
 
+    private static void GenDefaultMap()
+    {
+        for (int column = 0; column < chunksPerLine; column++)
+        {
+            for (int row = 0; row < chunksPerLine; row++)
+            {
+                // initialize spot to empty
+                Chunk chunk = new Chunk(ChunkType.EMPTY, Variant.BLUE, new Position(column, row));
+                map[row, column] = chunk;
+            }
+        }
+        foreach ((Position,ChunkType) specialChunk in defaultMap)
+        {
+            Position pos = specialChunk.Item1;
+            ChunkType type = specialChunk.Item2;
+            map[pos.y, pos.x] = new Chunk(type, Variant.BLUE, pos);
+        }
+    }
+
     private static bool PlaceChunk(ChunkType[] chunkTypes, int index)
     {
+        mapGenWatchdog++;
+        if (mapGenWatchdog > 1000)
+        {
+            //generation failed. Give up and use default
+            Debug.LogWarning("Generation failed. Defaulting");
+            GenDefaultMap();
+            return true;
+        }
         if (index >= chunkTypes.Length)
         {
             return true; //we're done!
@@ -110,6 +153,11 @@ public static class Map
 
     private static bool IsPositionLegal(Position checked_pos, ChunkType type)
     {
+        //check this isn't the start position
+        if (checked_pos.IsEqual(startPosition))
+        {
+            return false;
+        }
         //check surroundings aren't occupied
         List<Position> surroundings = checked_pos.GetSurroundingPositions();
         foreach (Position current_pos in surroundings)
@@ -205,7 +253,7 @@ public class Chunk
     {
         variant = _variant;
         position = _position;
-        chunkSO = GameManager.GetChunkData(_type);
+        chunkSO = MapManager.GetChunkData(_type);
     }
 }
 
@@ -252,6 +300,10 @@ public class Position
         return result;
     }
 
+    public bool IsEqual(Position other)
+    {
+        return (x == other.x && y == other.y);
+    }
     public bool IsCorner()
     {
         int end = (int)(Map.chunksPerLine - 1);

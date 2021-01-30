@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Pond
   m_EditorClassIdentifier: 
   type: 5
-  isRiddle: 1
+  isRiddle: 0
   ChunkPrefabs:
   - {fileID: 5544830903856544181, guid: 3f6506ef0ced53a4db35c7b0912eefb5, type: 3}

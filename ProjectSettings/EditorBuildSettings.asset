@@ -5,21 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: d1c3109bdb54ad54c8a2b2838528e640
   - enabled: 1
-    path: Assets/Scenes/Rei' Scene.unity
-    guid: 29b9f71b47372f942a8b9e6572acc691
-  - enabled: 0
-    path: 
-    guid: d1c3109bdb54ad54c8a2b2838528e640
+    path: Assets/Scenes/MainMenu.unity
+    guid: 0f04bf6a2e161774c93635a4189e4719
   - enabled: 1
     path: Assets/Scenes/BarziumScene.unity
     guid: a6f3afcb024fee24aa48d7677c57605e
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/GuideMainScene.unity
     guid: debf131ce92d70d488de7b2cbab5e86f

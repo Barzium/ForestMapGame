@@ -14,6 +14,7 @@ public class TimeManager : MonoBehaviour
     [SerializeField] Image deathPanel;
     float lowestPoint = 0.16f;
     Vector3 startPos = new Vector3();
+    public static bool isDead = false;
     private void Start()
     {
         _instance = this;
@@ -52,6 +53,7 @@ public class TimeManager : MonoBehaviour
         RedEyesManager._instance.DeathLocation();
         StopCoroutine(DeathPanel(true));
         StartCoroutine(DeathPanel(true));
+        isDead = true;
     }
     public void RestartSetting()
     {

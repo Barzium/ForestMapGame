@@ -9826,7 +9826,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 1.04, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.002394844, y: 0.17020586, z: -0.00088893203}
+  m_ConnectedAnchor: {x: 0.0023947994, y: 0.17020586, z: -0.0008888215}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -9985,13 +9985,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 634881141311524544}
-  movementSpeed: 20
+  inputVector: {x: 0, y: 0, z: 0}
+  movementSpeed: 3.5
   speed: 1.2
   groundCheck: {fileID: 634881142006973670}
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
     m_Bits: 256
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!114 &1569039381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10008,8 +10010,9 @@ MonoBehaviour:
   anim: {fileID: 1226804962}
   sr: {fileID: 1226804963}
   lightTorch: {fileID: 1348820879}
-  MaxTime: 5
+  MaxTime: 300
   StartTimeBeforeConsumption: 5
+  deathPanel: {fileID: 0}
 --- !u!1 &634881141556191694
 GameObject:
   m_ObjectHideFlags: 0
@@ -10138,8 +10141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 875624984e3b74b488de3b63036d386a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 50
-  rotationUpAndDownLimit: 45
+  rotationSpeed: 200
+  rotationUpAndDownLimit: 50
   playerBody: {fileID: 634881141311524557}
 --- !u!1 &634881141902003345
 GameObject:
@@ -10483,6 +10486,16 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630560254433189514, guid: 33dd5eb866f598e4588890886bc110a6,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.039215688
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630560254433189514, guid: 33dd5eb866f598e4588890886bc110a6,
+        type: 3}
+      propertyPath: InitialModule.startColor.minColor.a
+      value: 0.05882353
       objectReference: {fileID: 0}
     - target: {fileID: 2630560254433189514, guid: 33dd5eb866f598e4588890886bc110a6,
         type: 3}

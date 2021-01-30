@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2627,17 +2627,29 @@ MonoBehaviour:
   tiles:
   - prefab: {fileID: 4370419903800306940, guid: 4bfd64faa134072419a14fa869ba0c15,
       type: 3}
-    amount: 5
-  - prefab: {fileID: 4370419903800306940, guid: 58f50c7986aefc846be0b8ce31a5b156,
+    amount: 7
+  - prefab: {fileID: 4370419903800306940, guid: 097962683d843e044a89d43eaecae986,
       type: 3}
-    amount: 5
-  - prefab: {fileID: 4370419903800306940, guid: b99bdd9f852e9b349ac123f9c445319c,
+    amount: 13
+  - prefab: {fileID: 4370419903800306940, guid: 942d6521ea459644daefa3e858b13eed,
       type: 3}
-    amount: 5
+    amount: 6
+  - prefab: {fileID: 4370419903800306940, guid: 92af3a7a0db6cf843ae51a4d3ef307d5,
+      type: 3}
+    amount: 2
+  - prefab: {fileID: 4370419903800306940, guid: 3856765e94c3711458492a644bee7364,
+      type: 3}
+    amount: 4
+  - prefab: {fileID: 4370419903800306940, guid: 88c98d997af0a2046b1bb75a7bd07fb2,
+      type: 3}
+    amount: 7
   - prefab: {fileID: 4370419903800306940, guid: 511a5dcc0cac44446bdeb389500625f6,
       type: 3}
-    amount: 5
+    amount: 2
   - prefab: {fileID: 4370419903800306940, guid: f3b449b668c776949850d2fb071dadf6,
+      type: 3}
+    amount: 9
+  - prefab: {fileID: 4370419903800306940, guid: b99bdd9f852e9b349ac123f9c445319c,
       type: 3}
     amount: 5
 --- !u!61 &1958697972

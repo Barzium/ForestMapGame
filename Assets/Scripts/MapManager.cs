@@ -8,6 +8,7 @@ public class MapManager : MonoBehaviour
 
     [SerializeField] ChunkSO[] chunkPack;
     [SerializeField] MapParams mapParams;
+    [SerializeField] GameObject startChunkPrefab;
     [SerializeField] List<GameObject> emptyChunkPrefabs;
     static Dictionary<ChunkType, ChunkSO> allChunks = new Dictionary<ChunkType, ChunkSO>();
 
@@ -65,13 +66,20 @@ public class MapManager : MonoBehaviour
                 Chunk chunk = Map.map[row, column];
                 if (chunk.Type == ChunkType.EMPTY)
                 {
-                    if (emptyPrefabsIndex >= shuffledEmptyPrefabs.Count)
+                    if (row == mapParams.starty && column == mapParams.startx)
                     {
-                        Debug.LogErrorFormat("Illegal emptyPrefab index {0}", emptyPrefabsIndex);
-                        emptyPrefabsIndex = 0;
+                        chunk_prefab = startChunkPrefab;
                     }
-                    chunk_prefab = emptyChunkPrefabs[emptyPrefabsIndex];
-                    emptyPrefabsIndex++;
+                    else
+                    {
+                        if (emptyPrefabsIndex >= shuffledEmptyPrefabs.Count)
+                        {
+                            Debug.LogErrorFormat("Illegal emptyPrefab index {0}", emptyPrefabsIndex);
+                            emptyPrefabsIndex = 0;
+                        }
+                        chunk_prefab = emptyChunkPrefabs[emptyPrefabsIndex];
+                        emptyPrefabsIndex++;
+                    }
                 }
                 else
                 {

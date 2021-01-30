@@ -432,6 +432,8 @@ MonoBehaviour:
     chunkSize: 30
     startx: 2
     starty: 2
+  startChunkPrefab: {fileID: 2464138622558799652, guid: ed8191a1266703d489ecd2dd454577c4,
+    type: 3}
   emptyChunkPrefabs:
   - {fileID: 7725123466511762238, guid: d91a4e643c771934e827db7404fe6c14, type: 3}
   - {fileID: 2464138622558799652, guid: ed8191a1266703d489ecd2dd454577c4, type: 3}

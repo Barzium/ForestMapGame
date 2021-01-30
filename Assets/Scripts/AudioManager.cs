@@ -52,7 +52,7 @@ public class AudioManager : MonoBehaviour
             walkTimer = walkInterval;
         }
         else if (walkTimer > walkInterval * 0.2f || isMoving) {
-            walkTimer -= isRunning ? 2 : 1 * Time.deltaTime;
+            walkTimer -= (isRunning ? 3f : 1.5f )* Time.deltaTime;
         }
         if (isMoving) {
             currentFootIsR = !currentFootIsR;
@@ -70,7 +70,7 @@ public class AudioManager : MonoBehaviour
     private void Update() {
         if (!TimeManager.isDead) {
             isMoving = Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0;
-            isRunning = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.LeftShift);
+            isRunning = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
             UpdateFootsteps();
         }
     }

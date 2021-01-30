@@ -113,20 +113,9 @@ MonoBehaviour:
   minimumDragDistance: 0.7
   minimumDragTime: 2
   screenOffset: 0.1
-  zoomable: 0
+  zoomable: 1
   discardable: 0
   highlightObject: {fileID: 5550580245710249146}
-  description: '555555
-
-    555555555555
-
-    555555555555555
-
-    55555555555555
-
-    5
-
-'
 --- !u!1 &5550580245710249146
 GameObject:
   m_ObjectHideFlags: 0

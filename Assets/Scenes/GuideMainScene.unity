@@ -269,7 +269,7 @@ PrefabInstance:
     - target: {fileID: 4370419903800306936, guid: 7494572d170e13b4ca8b5182fada2cb3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4370419903800306936, guid: 7494572d170e13b4ca8b5182fada2cb3,
         type: 3}
@@ -308,6 +308,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4370419903800306939, guid: 7494572d170e13b4ca8b5182fada2cb3,
         type: 3}
+      propertyPath: zoomTime
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370419903800306939, guid: 7494572d170e13b4ca8b5182fada2cb3,
+        type: 3}
       propertyPath: zoomable
       value: 1
       objectReference: {fileID: 0}
@@ -319,7 +324,7 @@ PrefabInstance:
     - target: {fileID: 4370419903800306940, guid: 7494572d170e13b4ca8b5182fada2cb3,
         type: 3}
       propertyPath: m_Name
-      value: X mark 1
+      value: Info
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7494572d170e13b4ca8b5182fada2cb3, type: 3}
@@ -2172,7 +2177,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab85160814b9804392e897a12187c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutorialDelay: 2
+  tutorialTile: {fileID: 1683429434}
   spawners: []
+--- !u!114 &1683429434 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4370419903800306939, guid: 7494572d170e13b4ca8b5182fada2cb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 4574411}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0c5cd0d18ac3fc498cbfbbc42dcd082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1753100605
 GameObject:
   m_ObjectHideFlags: 0

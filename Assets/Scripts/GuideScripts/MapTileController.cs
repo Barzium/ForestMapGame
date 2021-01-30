@@ -89,7 +89,7 @@ public class MapTileController : MonoBehaviour
             ZoomIn();
     }
 
-    private void ZoomIn() {
+    public void ZoomIn() {
         isRotating = true;
         aTileIsZoomed = true;
         posBeforeZoom = transform.localPosition;

@@ -114,7 +114,7 @@ MonoBehaviour:
   minimumDragDistance: 0.7
   minimumDragTime: 2
   screenOffset: 0.1
-  zoomable: 0
+  zoomable: 1
   discardable: 0
   highlightObject: {fileID: 5550580245710249146}
 --- !u!1 &5550580245710249146

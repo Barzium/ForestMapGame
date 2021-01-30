@@ -49,8 +49,8 @@ public class CodeHandler : MonoBehaviour
         ShowAnswer(true);
     }
 
-    public void RegisterPassword(int[] password) {
-
+     void RegisterPassword(int[] password) {
+      
         if (password.Length == this.password.Length)
          this.password = password;
     }

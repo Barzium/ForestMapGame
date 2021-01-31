@@ -1348,6 +1348,15 @@ public:
 public:
 };
 
+
+// UnityEngine.BoxCollider2D
+struct  BoxCollider2D_tA3DD87FE6F65C39F0A81CDB4BEC0EDB370486E87  : public Collider2D_tD64BE58E48B95D89D349FEAB54D0FE2EEBF83379
+{
+public:
+
+public:
+};
+
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -1540,6 +1549,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float RaycastHit2D_get_distance_m2D9F391717EC
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 * Object_FindObjectFromInstanceID_m7594ED98F525AAE38FEC80052729ECAF3E821350 (int32_t ___instanceID0, const RuntimeMethod* method);
 // UnityEngine.Collider2D UnityEngine.RaycastHit2D::get_collider()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Collider2D_tD64BE58E48B95D89D349FEAB54D0FE2EEBF83379 * RaycastHit2D_get_collider_m6A7EC53B2E179C2EFF4F29018A132B2979CBE976 (RaycastHit2D_t5E8A7F96317BAF2033362FC780F4D72DC72764BE * __this, const RuntimeMethod* method);
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"

@@ -31,8 +31,14 @@ struct Void_t22962CB4C05B1D89B55A6E1139F0E87A90987017;
 struct CharacterController_t0ED98F461DBB7AC5B189C190153D83D5888BF93E;
 // UnityEngine.Collider
 struct Collider_t0FEEB36760860AD21B3B1F0509C365B393EC4BDF;
+// UnityEngine.Collision
+struct Collision_t7FF0F4B0E24A2AEB1131DD980F63AB8CBF11FC3C;
+// UnityEngine.Component
+struct Component_t05064EF382ABCAF4B8C94F8A350EA85184C26621;
 // UnityEngine.ContactPoint[]
 struct ContactPointU5BU5D_t10BB5D5BFFFA3C919FD97DFDEDB49D954AFB8EAA;
+// UnityEngine.GameObject
+struct GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F;
 // UnityEngine.Object
 struct Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0;
 // UnityEngine.RaycastHit[]
@@ -48,6 +54,7 @@ IL2CPP_EXTERN_C RuntimeClass* PhysicsScene_tC24001806A99648F6EFD4D63957D47D8AB16
 IL2CPP_EXTERN_C RuntimeClass* RaycastHitU5BU5D_tE9BB282384F0196211AD1A480477254188211F57_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C String_t* _stringLiteral62C02D6AE723470CE8452EABBE91DD3AB73F31F4;
+IL2CPP_EXTERN_C const uint32_t Collision_get_gameObject_m9A7069ABE50D4BB957A8ED76E5F4A59ACEC57C49_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t PhysicsScene_Equals_m538C6A86CCC4EF0546590BAC51E5D08ACC2CBEF9_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t PhysicsScene_Raycast_m90D1AE1F641D9344BEBEF32E7AC0BAC883024C0B_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t PhysicsScene_Raycast_mA90972A8E828722A26EBC754EABB3086BE6E2336_MetadataUsageId;
@@ -336,6 +343,70 @@ public:
 	inline void set_m_Handle_0(int32_t value)
 	{
 		___m_Handle_0 = value;
+	}
+};
+
+
+// UnityEngine.Quaternion
+struct  Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357 
+{
+public:
+	// System.Single UnityEngine.Quaternion::x
+	float ___x_0;
+	// System.Single UnityEngine.Quaternion::y
+	float ___y_1;
+	// System.Single UnityEngine.Quaternion::z
+	float ___z_2;
+	// System.Single UnityEngine.Quaternion::w
+	float ___w_3;
+
+public:
+	inline static int32_t get_offset_of_x_0() { return static_cast<int32_t>(offsetof(Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357, ___x_0)); }
+	inline float get_x_0() const { return ___x_0; }
+	inline float* get_address_of_x_0() { return &___x_0; }
+	inline void set_x_0(float value)
+	{
+		___x_0 = value;
+	}
+
+	inline static int32_t get_offset_of_y_1() { return static_cast<int32_t>(offsetof(Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357, ___y_1)); }
+	inline float get_y_1() const { return ___y_1; }
+	inline float* get_address_of_y_1() { return &___y_1; }
+	inline void set_y_1(float value)
+	{
+		___y_1 = value;
+	}
+
+	inline static int32_t get_offset_of_z_2() { return static_cast<int32_t>(offsetof(Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357, ___z_2)); }
+	inline float get_z_2() const { return ___z_2; }
+	inline float* get_address_of_z_2() { return &___z_2; }
+	inline void set_z_2(float value)
+	{
+		___z_2 = value;
+	}
+
+	inline static int32_t get_offset_of_w_3() { return static_cast<int32_t>(offsetof(Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357, ___w_3)); }
+	inline float get_w_3() const { return ___w_3; }
+	inline float* get_address_of_w_3() { return &___w_3; }
+	inline void set_w_3(float value)
+	{
+		___w_3 = value;
+	}
+};
+
+struct Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357_StaticFields
+{
+public:
+	// UnityEngine.Quaternion UnityEngine.Quaternion::identityQuaternion
+	Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357  ___identityQuaternion_4;
+
+public:
+	inline static int32_t get_offset_of_identityQuaternion_4() { return static_cast<int32_t>(offsetof(Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357_StaticFields, ___identityQuaternion_4)); }
+	inline Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357  get_identityQuaternion_4() const { return ___identityQuaternion_4; }
+	inline Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357 * get_address_of_identityQuaternion_4() { return &___identityQuaternion_4; }
+	inline void set_identityQuaternion_4(Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357  value)
+	{
+		___identityQuaternion_4 = value;
 	}
 };
 
@@ -880,6 +951,24 @@ struct ControllerColliderHit_tB009AA7F769B4A3E988DEF71F4C5A29AB6A38968_marshaled
 	int32_t ___m_Push_6;
 };
 
+// UnityEngine.ForceMode
+struct  ForceMode_t76188FF14D0038E184106555207A81218E97D0A5 
+{
+public:
+	// System.Int32 UnityEngine.ForceMode::value__
+	int32_t ___value___2;
+
+public:
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(ForceMode_t76188FF14D0038E184106555207A81218E97D0A5, ___value___2)); }
+	inline int32_t get_value___2() const { return ___value___2; }
+	inline int32_t* get_address_of_value___2() { return &___value___2; }
+	inline void set_value___2(int32_t value)
+	{
+		___value___2 = value;
+	}
+};
+
+
 // UnityEngine.Object
 struct  Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0  : public RuntimeObject
 {
@@ -1047,8 +1136,26 @@ public:
 };
 
 
+// UnityEngine.GameObject
+struct  GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F  : public Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0
+{
+public:
+
+public:
+};
+
+
 // UnityEngine.Collider
 struct  Collider_t0FEEB36760860AD21B3B1F0509C365B393EC4BDF  : public Component_t05064EF382ABCAF4B8C94F8A350EA85184C26621
+{
+public:
+
+public:
+};
+
+
+// UnityEngine.Joint
+struct  Joint_t734F77C82E6372173403FCA61D9E7FC4618595AF  : public Component_t05064EF382ABCAF4B8C94F8A350EA85184C26621
 {
 public:
 
@@ -1085,6 +1192,15 @@ public:
 
 // UnityEngine.CharacterController
 struct  CharacterController_t0ED98F461DBB7AC5B189C190153D83D5888BF93E  : public Collider_t0FEEB36760860AD21B3B1F0509C365B393EC4BDF
+{
+public:
+
+public:
+};
+
+
+// UnityEngine.HingeJoint
+struct  HingeJoint_tDA10BC5B1D01F5226ED5B0F83D106E296925036D  : public Joint_t734F77C82E6372173403FCA61D9E7FC4618595AF
 {
 public:
 
@@ -1226,6 +1342,10 @@ public:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CharacterController_Move_Injected_m729AD52E288CE0BF810D548AF6F9309EEB56A551 (CharacterController_t0ED98F461DBB7AC5B189C190153D83D5888BF93E * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___motion0, const RuntimeMethod* method);
 // System.Void UnityEngine.Collider::ClosestPoint_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Collider_ClosestPoint_Injected_mBB4217A183FB329B8F3B1DE8837CA5B12A3B7D9F (Collider_t0FEEB36760860AD21B3B1F0509C365B393EC4BDF * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___position0, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___ret1, const RuntimeMethod* method);
+// System.Boolean UnityEngine.Object::op_Inequality(UnityEngine.Object,UnityEngine.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Inequality_m31EF58E217E8F4BDD3E409DEF79E1AEE95874FC1 (Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 * ___x0, Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 * ___y1, const RuntimeMethod* method);
+// UnityEngine.GameObject UnityEngine.Component::get_gameObject()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * Component_get_gameObject_m0B0570BA8DDD3CD78A9DB568EA18D7317686603C (Component_t05064EF382ABCAF4B8C94F8A350EA85184C26621 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.Physics::get_defaultPhysicsScene_Injected(UnityEngine.PhysicsScene&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Physics_get_defaultPhysicsScene_Injected_mEAB07CA5307D0DDB331A31E6A6BA28CF83009262 (PhysicsScene_tC24001806A99648F6EFD4D63957D47D8AB1668F5 * ___ret0, const RuntimeMethod* method);
 // UnityEngine.PhysicsScene UnityEngine.Physics::get_defaultPhysicsScene()
@@ -1294,6 +1414,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  RaycastHit_get_normal_mF736A6D09D98D63AB7E5BF10F38AEBFC177A1D94 (RaycastHit_t19695F18F9265FE5425062BBA6A4D330480538C3 * __this, const RuntimeMethod* method);
 // System.Single UnityEngine.RaycastHit::get_distance()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float RaycastHit_get_distance_m1CBA60855C35F29BBC348D374BBC76386A243543 (RaycastHit_t19695F18F9265FE5425062BBA6A4D330480538C3 * __this, const RuntimeMethod* method);
+// System.Void UnityEngine.Rigidbody::get_rotation_Injected(UnityEngine.Quaternion&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_get_rotation_Injected_m5FEC1EC2B3CFCE6585C63CD64ECAE39828B73C91 (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * __this, Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357 * ___ret0, const RuntimeMethod* method);
+// System.Void UnityEngine.Rigidbody::MoveRotation_Injected(UnityEngine.Quaternion&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_MoveRotation_Injected_m283E5FB82CB1721DC5220311967ED0E6ED831BF0 (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * __this, Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357 * ___rot0, const RuntimeMethod* method);
+// System.Void UnityEngine.Rigidbody::AddForce_Injected(UnityEngine.Vector3&,UnityEngine.ForceMode)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddForce_Injected_mEB8DB621D03BE740C5CBD472E873FF8B6EF6C119 (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___force0, int32_t ___mode1, const RuntimeMethod* method);
+// System.Void UnityEngine.Rigidbody::AddForce(UnityEngine.Vector3,UnityEngine.ForceMode)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddForce_mD64ACF772614FE36CFD8A477A07A407B35DF1A54 (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___force0, int32_t ___mode1, const RuntimeMethod* method);
+// System.Void UnityEngine.Rigidbody::AddRelativeForce_Injected(UnityEngine.Vector3&,UnityEngine.ForceMode)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddRelativeForce_Injected_m1D129AFF4E7F635163F8453D167F16C10D53510E (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___force0, int32_t ___mode1, const RuntimeMethod* method);
+// System.Void UnityEngine.Rigidbody::AddRelativeForce(UnityEngine.Vector3,UnityEngine.ForceMode)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddRelativeForce_m90667A3C15C991BBF522053C5A87CBDA3BAECBB3 (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___force0, int32_t ___mode1, const RuntimeMethod* method);
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -1417,6 +1549,54 @@ IL2CPP_EXTERN_C void Collision_t7FF0F4B0E24A2AEB1131DD980F63AB8CBF11FC3C_marshal
 IL2CPP_EXTERN_C void Collision_t7FF0F4B0E24A2AEB1131DD980F63AB8CBF11FC3C_marshal_com_cleanup(Collision_t7FF0F4B0E24A2AEB1131DD980F63AB8CBF11FC3C_marshaled_com& marshaled)
 {
 }
+// UnityEngine.GameObject UnityEngine.Collision::get_gameObject()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * Collision_get_gameObject_m9A7069ABE50D4BB957A8ED76E5F4A59ACEC57C49 (Collision_t7FF0F4B0E24A2AEB1131DD980F63AB8CBF11FC3C * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Collision_get_gameObject_m9A7069ABE50D4BB957A8ED76E5F4A59ACEC57C49_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * V_0 = NULL;
+	GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * G_B3_0 = NULL;
+	{
+		Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * L_0 = __this->get_m_Rigidbody_2();
+		IL2CPP_RUNTIME_CLASS_INIT(Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0_il2cpp_TypeInfo_var);
+		bool L_1 = Object_op_Inequality_m31EF58E217E8F4BDD3E409DEF79E1AEE95874FC1(L_0, (Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 *)NULL, /*hidden argument*/NULL);
+		if (L_1)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		Collider_t0FEEB36760860AD21B3B1F0509C365B393EC4BDF * L_2 = __this->get_m_Collider_3();
+		NullCheck(L_2);
+		GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * L_3 = Component_get_gameObject_m0B0570BA8DDD3CD78A9DB568EA18D7317686603C(L_2, /*hidden argument*/NULL);
+		G_B3_0 = L_3;
+		goto IL_0027;
+	}
+
+IL_001c:
+	{
+		Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * L_4 = __this->get_m_Rigidbody_2();
+		NullCheck(L_4);
+		GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * L_5 = Component_get_gameObject_m0B0570BA8DDD3CD78A9DB568EA18D7317686603C(L_4, /*hidden argument*/NULL);
+		G_B3_0 = L_5;
+	}
+
+IL_0027:
+	{
+		V_0 = G_B3_0;
+		goto IL_002a;
+	}
+
+IL_002a:
+	{
+		GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * L_6 = V_0;
+		return L_6;
+	}
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -1471,6 +1651,30 @@ IL2CPP_EXTERN_C void ControllerColliderHit_tB009AA7F769B4A3E988DEF71F4C5A29AB6A3
 IL2CPP_EXTERN_C void ControllerColliderHit_tB009AA7F769B4A3E988DEF71F4C5A29AB6A38968_marshal_com_cleanup(ControllerColliderHit_tB009AA7F769B4A3E988DEF71F4C5A29AB6A38968_marshaled_com& marshaled)
 {
 }
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -2869,6 +3073,97 @@ IL2CPP_EXTERN_C  float RaycastHit_get_distance_m1CBA60855C35F29BBC348D374BBC7638
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// UnityEngine.Quaternion UnityEngine.Rigidbody::get_rotation()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357  Rigidbody_get_rotation_mD967DD98F16F80C0D74F8F1C25953D0609906BE5 (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * __this, const RuntimeMethod* method)
+{
+	Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357  V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		Rigidbody_get_rotation_Injected_m5FEC1EC2B3CFCE6585C63CD64ECAE39828B73C91(__this, (Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357 *)(&V_0), /*hidden argument*/NULL);
+		Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357  L_0 = V_0;
+		return L_0;
+	}
+}
+// System.Void UnityEngine.Rigidbody::MoveRotation(UnityEngine.Quaternion)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_MoveRotation_mCBE2CF9F1B4A86C4BCB899AAB4C4EE8BBAD21C84 (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * __this, Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357  ___rot0, const RuntimeMethod* method)
+{
+	{
+		Rigidbody_MoveRotation_Injected_m283E5FB82CB1721DC5220311967ED0E6ED831BF0(__this, (Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357 *)(&___rot0), /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Rigidbody::AddForce(UnityEngine.Vector3,UnityEngine.ForceMode)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddForce_mD64ACF772614FE36CFD8A477A07A407B35DF1A54 (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___force0, int32_t ___mode1, const RuntimeMethod* method)
+{
+	{
+		int32_t L_0 = ___mode1;
+		Rigidbody_AddForce_Injected_mEB8DB621D03BE740C5CBD472E873FF8B6EF6C119(__this, (Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 *)(&___force0), L_0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Rigidbody::AddForce(UnityEngine.Vector3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddForce_mC8140D90B806634A733624F671C45AD7CDBEDB38 (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___force0, const RuntimeMethod* method)
+{
+	{
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_0 = ___force0;
+		Rigidbody_AddForce_mD64ACF772614FE36CFD8A477A07A407B35DF1A54(__this, L_0, 0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Rigidbody::AddRelativeForce(UnityEngine.Vector3,UnityEngine.ForceMode)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddRelativeForce_m90667A3C15C991BBF522053C5A87CBDA3BAECBB3 (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___force0, int32_t ___mode1, const RuntimeMethod* method)
+{
+	{
+		int32_t L_0 = ___mode1;
+		Rigidbody_AddRelativeForce_Injected_m1D129AFF4E7F635163F8453D167F16C10D53510E(__this, (Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 *)(&___force0), L_0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Rigidbody::AddRelativeForce(UnityEngine.Vector3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddRelativeForce_m438C5E9883134D09E23FA50D7438FE2C8D81510B (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___force0, const RuntimeMethod* method)
+{
+	{
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_0 = ___force0;
+		Rigidbody_AddRelativeForce_m90667A3C15C991BBF522053C5A87CBDA3BAECBB3(__this, L_0, 0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Rigidbody::get_rotation_Injected(UnityEngine.Quaternion&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_get_rotation_Injected_m5FEC1EC2B3CFCE6585C63CD64ECAE39828B73C91 (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * __this, Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357 * ___ret0, const RuntimeMethod* method)
+{
+	typedef void (*Rigidbody_get_rotation_Injected_m5FEC1EC2B3CFCE6585C63CD64ECAE39828B73C91_ftn) (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 *, Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357 *);
+	static Rigidbody_get_rotation_Injected_m5FEC1EC2B3CFCE6585C63CD64ECAE39828B73C91_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Rigidbody_get_rotation_Injected_m5FEC1EC2B3CFCE6585C63CD64ECAE39828B73C91_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Rigidbody::get_rotation_Injected(UnityEngine.Quaternion&)");
+	_il2cpp_icall_func(__this, ___ret0);
+}
+// System.Void UnityEngine.Rigidbody::MoveRotation_Injected(UnityEngine.Quaternion&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_MoveRotation_Injected_m283E5FB82CB1721DC5220311967ED0E6ED831BF0 (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * __this, Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357 * ___rot0, const RuntimeMethod* method)
+{
+	typedef void (*Rigidbody_MoveRotation_Injected_m283E5FB82CB1721DC5220311967ED0E6ED831BF0_ftn) (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 *, Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357 *);
+	static Rigidbody_MoveRotation_Injected_m283E5FB82CB1721DC5220311967ED0E6ED831BF0_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Rigidbody_MoveRotation_Injected_m283E5FB82CB1721DC5220311967ED0E6ED831BF0_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Rigidbody::MoveRotation_Injected(UnityEngine.Quaternion&)");
+	_il2cpp_icall_func(__this, ___rot0);
+}
+// System.Void UnityEngine.Rigidbody::AddForce_Injected(UnityEngine.Vector3&,UnityEngine.ForceMode)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddForce_Injected_mEB8DB621D03BE740C5CBD472E873FF8B6EF6C119 (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___force0, int32_t ___mode1, const RuntimeMethod* method)
+{
+	typedef void (*Rigidbody_AddForce_Injected_mEB8DB621D03BE740C5CBD472E873FF8B6EF6C119_ftn) (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 *, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 *, int32_t);
+	static Rigidbody_AddForce_Injected_mEB8DB621D03BE740C5CBD472E873FF8B6EF6C119_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Rigidbody_AddForce_Injected_mEB8DB621D03BE740C5CBD472E873FF8B6EF6C119_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Rigidbody::AddForce_Injected(UnityEngine.Vector3&,UnityEngine.ForceMode)");
+	_il2cpp_icall_func(__this, ___force0, ___mode1);
+}
+// System.Void UnityEngine.Rigidbody::AddRelativeForce_Injected(UnityEngine.Vector3&,UnityEngine.ForceMode)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddRelativeForce_Injected_m1D129AFF4E7F635163F8453D167F16C10D53510E (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___force0, int32_t ___mode1, const RuntimeMethod* method)
+{
+	typedef void (*Rigidbody_AddRelativeForce_Injected_m1D129AFF4E7F635163F8453D167F16C10D53510E_ftn) (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 *, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 *, int32_t);
+	static Rigidbody_AddRelativeForce_Injected_m1D129AFF4E7F635163F8453D167F16C10D53510E_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Rigidbody_AddRelativeForce_Injected_m1D129AFF4E7F635163F8453D167F16C10D53510E_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Rigidbody::AddRelativeForce_Injected(UnityEngine.Vector3&,UnityEngine.ForceMode)");
+	_il2cpp_icall_func(__this, ___force0, ___mode1);
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

@@ -1833,7 +1833,7 @@ public:
 
 
 // System.Collections.Generic.ICollectionDebugView`1<System.Object>
-struct  ICollectionDebugView_1_tD1D98F2CFECA8921317EC16A7F265BE697F11BCD  : public RuntimeObject
+struct  ICollectionDebugView_1_tDB6BE6BBE12633D368C4DE0585A35483E361A97E  : public RuntimeObject
 {
 public:
 
@@ -1842,7 +1842,7 @@ public:
 
 
 // System.Collections.Generic.ICollectionDebugView`1<System.Object>
-struct  ICollectionDebugView_1_tDB6BE6BBE12633D368C4DE0585A35483E361A97E  : public RuntimeObject
+struct  ICollectionDebugView_1_tD1D98F2CFECA8921317EC16A7F265BE697F11BCD  : public RuntimeObject
 {
 public:
 
@@ -2740,34 +2740,6 @@ struct  InternalStringComparer_tCD150130A3DB4C80186B5D8145B910B33496D4CD  : publ
 public:
 
 public:
-};
-
-
-// System.Collections.Generic.KeyValuePair`2<System.Int32,System.Boolean>
-struct  KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 
-{
-public:
-	// TKey System.Collections.Generic.KeyValuePair`2::key
-	int32_t ___key_0;
-	// TValue System.Collections.Generic.KeyValuePair`2::value
-	bool ___value_1;
-
-public:
-	inline static int32_t get_offset_of_key_0() { return static_cast<int32_t>(offsetof(KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82, ___key_0)); }
-	inline int32_t get_key_0() const { return ___key_0; }
-	inline int32_t* get_address_of_key_0() { return &___key_0; }
-	inline void set_key_0(int32_t value)
-	{
-		___key_0 = value;
-	}
-
-	inline static int32_t get_offset_of_value_1() { return static_cast<int32_t>(offsetof(KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82, ___value_1)); }
-	inline bool get_value_1() const { return ___value_1; }
-	inline bool* get_address_of_value_1() { return &___value_1; }
-	inline void set_value_1(bool value)
-	{
-		___value_1 = value;
-	}
 };
 
 
@@ -6663,14 +6635,6 @@ IL2CPP_EXTERN_C inline IL2CPP_METHOD_ATTR Guid_t  KeyValuePair_2_get_Key_m369BFE
 IL2CPP_EXTERN_C inline IL2CPP_METHOD_ATTR RuntimeObject * KeyValuePair_2_get_Value_m8FB428463974E4EBE4B4EB74E3A6B2D9D7DBBBC2_gshared_inline (KeyValuePair_2_tD85A2E33C726647EDFB2F7F8E7EDC766E3C53B78 * __this, const RuntimeMethod* method);
 // System.String System.Collections.Generic.KeyValuePair`2<System.Guid,System.Object>::ToString()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* KeyValuePair_2_ToString_m6F4CD0CD2830A9BAB1881968345F329D51773403_gshared (KeyValuePair_2_tD85A2E33C726647EDFB2F7F8E7EDC766E3C53B78 * __this, const RuntimeMethod* method);
-// System.Void System.Collections.Generic.KeyValuePair`2<System.Int32,System.Boolean>::.ctor(TKey,TValue)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KeyValuePair_2__ctor_m083DF7A4BCA073A7062F09B64C185A68A0F83955_gshared (KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 * __this, int32_t ___key0, bool ___value1, const RuntimeMethod* method);
-// TKey System.Collections.Generic.KeyValuePair`2<System.Int32,System.Boolean>::get_Key()
-IL2CPP_EXTERN_C inline IL2CPP_METHOD_ATTR int32_t KeyValuePair_2_get_Key_mFF22AA1BD60F2760A4CAAB581B5996DDD62CBCAA_gshared_inline (KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 * __this, const RuntimeMethod* method);
-// TValue System.Collections.Generic.KeyValuePair`2<System.Int32,System.Boolean>::get_Value()
-IL2CPP_EXTERN_C inline IL2CPP_METHOD_ATTR bool KeyValuePair_2_get_Value_m2D91533A66E5BB608E0175099C9D7289D172D318_gshared_inline (KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 * __this, const RuntimeMethod* method);
-// System.String System.Collections.Generic.KeyValuePair`2<System.Int32,System.Boolean>::ToString()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* KeyValuePair_2_ToString_mB67FA5A5A883BF5203F33F59571EC4B946A2C916_gshared (KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 * __this, const RuntimeMethod* method);
 
 // System.Type System.Type::GetTypeFromHandle(System.RuntimeTypeHandle)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t * Type_GetTypeFromHandle_m9DC58ADF0512987012A8A016FB64B068F3B1AFF6 (RuntimeTypeHandle_t7B542280A22F0EC4EAC2061C29178845847A8B2D  ___handle0, const RuntimeMethod* method);
@@ -6951,26 +6915,6 @@ inline RuntimeObject * KeyValuePair_2_get_Value_m8FB428463974E4EBE4B4EB74E3A6B2D
 inline String_t* KeyValuePair_2_ToString_m6F4CD0CD2830A9BAB1881968345F329D51773403 (KeyValuePair_2_tD85A2E33C726647EDFB2F7F8E7EDC766E3C53B78 * __this, const RuntimeMethod* method)
 {
 	return ((  String_t* (*) (KeyValuePair_2_tD85A2E33C726647EDFB2F7F8E7EDC766E3C53B78 *, const RuntimeMethod*))KeyValuePair_2_ToString_m6F4CD0CD2830A9BAB1881968345F329D51773403_gshared)(__this, method);
-}
-// System.Void System.Collections.Generic.KeyValuePair`2<System.Int32,System.Boolean>::.ctor(TKey,TValue)
-inline void KeyValuePair_2__ctor_m083DF7A4BCA073A7062F09B64C185A68A0F83955 (KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 * __this, int32_t ___key0, bool ___value1, const RuntimeMethod* method)
-{
-	((  void (*) (KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 *, int32_t, bool, const RuntimeMethod*))KeyValuePair_2__ctor_m083DF7A4BCA073A7062F09B64C185A68A0F83955_gshared)(__this, ___key0, ___value1, method);
-}
-// TKey System.Collections.Generic.KeyValuePair`2<System.Int32,System.Boolean>::get_Key()
-inline int32_t KeyValuePair_2_get_Key_mFF22AA1BD60F2760A4CAAB581B5996DDD62CBCAA_inline (KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 * __this, const RuntimeMethod* method)
-{
-	return ((  int32_t (*) (KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 *, const RuntimeMethod*))KeyValuePair_2_get_Key_mFF22AA1BD60F2760A4CAAB581B5996DDD62CBCAA_gshared_inline)(__this, method);
-}
-// TValue System.Collections.Generic.KeyValuePair`2<System.Int32,System.Boolean>::get_Value()
-inline bool KeyValuePair_2_get_Value_m2D91533A66E5BB608E0175099C9D7289D172D318_inline (KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 * __this, const RuntimeMethod* method)
-{
-	return ((  bool (*) (KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 *, const RuntimeMethod*))KeyValuePair_2_get_Value_m2D91533A66E5BB608E0175099C9D7289D172D318_gshared_inline)(__this, method);
-}
-// System.String System.Collections.Generic.KeyValuePair`2<System.Int32,System.Boolean>::ToString()
-inline String_t* KeyValuePair_2_ToString_mB67FA5A5A883BF5203F33F59571EC4B946A2C916 (KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 * __this, const RuntimeMethod* method)
-{
-	return ((  String_t* (*) (KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 *, const RuntimeMethod*))KeyValuePair_2_ToString_mB67FA5A5A883BF5203F33F59571EC4B946A2C916_gshared)(__this, method);
 }
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -33114,6 +33058,54 @@ IL_000a:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 // System.Void System.Collections.Generic.KeyValuePair`2<System.DateTime,System.Object>::.ctor(TKey,TValue)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KeyValuePair_2__ctor_mDE04093EC61BE2A8488E791E66598DE871AA96AF_gshared (KeyValuePair_2_t5DDBBB9A3C8CBE3A4A39721E8F0A10AEBF13737B * __this, DateTime_t349B7449FBAAFF4192636E2B7A07694DA9236132  ___key0, RuntimeObject * ___value1, const RuntimeMethod* method)
 {
@@ -33324,79 +33316,6 @@ IL2CPP_EXTERN_C  String_t* KeyValuePair_2_ToString_m6F4CD0CD2830A9BAB1881968345F
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void System.Collections.Generic.KeyValuePair`2<System.Int32,System.Boolean>::.ctor(TKey,TValue)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KeyValuePair_2__ctor_m083DF7A4BCA073A7062F09B64C185A68A0F83955_gshared (KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 * __this, int32_t ___key0, bool ___value1, const RuntimeMethod* method)
-{
-	{
-		int32_t L_0 = ___key0;
-		__this->set_key_0(L_0);
-		bool L_1 = ___value1;
-		__this->set_value_1(L_1);
-		return;
-	}
-}
-IL2CPP_EXTERN_C  void KeyValuePair_2__ctor_m083DF7A4BCA073A7062F09B64C185A68A0F83955_AdjustorThunk (RuntimeObject * __this, int32_t ___key0, bool ___value1, const RuntimeMethod* method)
-{
-	int32_t _offset = 1;
-	KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 * _thisAdjusted = reinterpret_cast<KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 *>(__this + _offset);
-	KeyValuePair_2__ctor_m083DF7A4BCA073A7062F09B64C185A68A0F83955(_thisAdjusted, ___key0, ___value1, method);
-}
-// TKey System.Collections.Generic.KeyValuePair`2<System.Int32,System.Boolean>::get_Key()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t KeyValuePair_2_get_Key_mFF22AA1BD60F2760A4CAAB581B5996DDD62CBCAA_gshared (KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 * __this, const RuntimeMethod* method)
-{
-	{
-		int32_t L_0 = (int32_t)__this->get_key_0();
-		return (int32_t)L_0;
-	}
-}
-IL2CPP_EXTERN_C  int32_t KeyValuePair_2_get_Key_mFF22AA1BD60F2760A4CAAB581B5996DDD62CBCAA_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
-{
-	int32_t _offset = 1;
-	KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 * _thisAdjusted = reinterpret_cast<KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 *>(__this + _offset);
-	return KeyValuePair_2_get_Key_mFF22AA1BD60F2760A4CAAB581B5996DDD62CBCAA_inline(_thisAdjusted, method);
-}
-// TValue System.Collections.Generic.KeyValuePair`2<System.Int32,System.Boolean>::get_Value()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KeyValuePair_2_get_Value_m2D91533A66E5BB608E0175099C9D7289D172D318_gshared (KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 * __this, const RuntimeMethod* method)
-{
-	{
-		bool L_0 = (bool)__this->get_value_1();
-		return (bool)L_0;
-	}
-}
-IL2CPP_EXTERN_C  bool KeyValuePair_2_get_Value_m2D91533A66E5BB608E0175099C9D7289D172D318_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
-{
-	int32_t _offset = 1;
-	KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 * _thisAdjusted = reinterpret_cast<KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 *>(__this + _offset);
-	return KeyValuePair_2_get_Value_m2D91533A66E5BB608E0175099C9D7289D172D318_inline(_thisAdjusted, method);
-}
-// System.String System.Collections.Generic.KeyValuePair`2<System.Int32,System.Boolean>::ToString()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* KeyValuePair_2_ToString_mB67FA5A5A883BF5203F33F59571EC4B946A2C916_gshared (KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 * __this, const RuntimeMethod* method)
-{
-	{
-		int32_t L_0 = KeyValuePair_2_get_Key_mFF22AA1BD60F2760A4CAAB581B5996DDD62CBCAA_inline((KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 *)(KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 *)__this, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->klass)->rgctx_data, 0));
-		int32_t L_1 = L_0;
-		RuntimeObject * L_2 = Box(IL2CPP_RGCTX_DATA(InitializedTypeInfo(method->klass)->rgctx_data, 1), &L_1);
-		bool L_3 = KeyValuePair_2_get_Value_m2D91533A66E5BB608E0175099C9D7289D172D318_inline((KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 *)(KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 *)__this, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->klass)->rgctx_data, 2));
-		bool L_4 = L_3;
-		RuntimeObject * L_5 = Box(IL2CPP_RGCTX_DATA(InitializedTypeInfo(method->klass)->rgctx_data, 3), &L_4);
-		String_t* L_6 = KeyValuePair_PairToString_m6BF6066704BEFFC9313BDE0D4B6D75E3A9056B03((RuntimeObject *)L_2, (RuntimeObject *)L_5, /*hidden argument*/NULL);
-		return (String_t*)L_6;
-	}
-}
-IL2CPP_EXTERN_C  String_t* KeyValuePair_2_ToString_mB67FA5A5A883BF5203F33F59571EC4B946A2C916_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
-{
-	int32_t _offset = 1;
-	KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 * _thisAdjusted = reinterpret_cast<KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 *>(__this + _offset);
-	return KeyValuePair_2_ToString_mB67FA5A5A883BF5203F33F59571EC4B946A2C916(_thisAdjusted, method);
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
 IL2CPP_EXTERN_C inline IL2CPP_METHOD_ATTR int32_t Enumerator_get_Current_m47B51F85B7324026D19B7DA7A69CC2CF0709E9B0_gshared_inline (Enumerator_t054B51453CDEC820A259810890100462714A4687 * __this, const RuntimeMethod* method)
 {
 	{
@@ -33458,19 +33377,5 @@ IL2CPP_EXTERN_C inline IL2CPP_METHOD_ATTR RuntimeObject * KeyValuePair_2_get_Val
 	{
 		RuntimeObject * L_0 = (RuntimeObject *)__this->get_value_1();
 		return (RuntimeObject *)L_0;
-	}
-}
-IL2CPP_EXTERN_C inline IL2CPP_METHOD_ATTR int32_t KeyValuePair_2_get_Key_mFF22AA1BD60F2760A4CAAB581B5996DDD62CBCAA_gshared_inline (KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 * __this, const RuntimeMethod* method)
-{
-	{
-		int32_t L_0 = (int32_t)__this->get_key_0();
-		return (int32_t)L_0;
-	}
-}
-IL2CPP_EXTERN_C inline IL2CPP_METHOD_ATTR bool KeyValuePair_2_get_Value_m2D91533A66E5BB608E0175099C9D7289D172D318_gshared_inline (KeyValuePair_2_t411E4248A20D0FDB15190B13EA12EBCB69500C82 * __this, const RuntimeMethod* method)
-{
-	{
-		bool L_0 = (bool)__this->get_value_1();
-		return (bool)L_0;
 	}
 }

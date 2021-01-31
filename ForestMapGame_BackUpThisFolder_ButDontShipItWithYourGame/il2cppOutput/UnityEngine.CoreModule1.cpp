@@ -880,6 +880,7 @@ IL2CPP_EXTERN_C const uint32_t Quaternion_Euler_m55C96FCD397CC69109261572710608D
 IL2CPP_EXTERN_C const uint32_t Quaternion_Internal_FromEulerRad_mC6AB58E2F3C37DFE2089A38D578E862B3430E755_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t Quaternion_Internal_ToEulerRad_m5F7B68953CC22DCE9EC246396B02F0ADC0B1C470_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t Quaternion_Inverse_mC3A78571A826F05CE179637E675BD25F8B203E0C_MetadataUsageId;
+IL2CPP_EXTERN_C const uint32_t Quaternion_LookRotation_m465C08262650385D02ADDE78C9791AED47D2155F_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t Quaternion_LookRotation_m7BED8FBB457FF073F183AC7962264E5110794672_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t Quaternion_SetLookRotation_mDB3D5A8083E5AB5881FA9CC1EACFC196F61B8204_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t Quaternion_ToString_m38DF4A1C05A91331D0A208F45CE74AF005AB463D_MetadataUsageId;
@@ -7280,6 +7281,24 @@ public:
 };
 
 
+// UnityEngine.PrimitiveType
+struct  PrimitiveType_t37F0056BA9C61594039522E27426D4D52D0943DE 
+{
+public:
+	// System.Int32 UnityEngine.PrimitiveType::value__
+	int32_t ___value___2;
+
+public:
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(PrimitiveType_t37F0056BA9C61594039522E27426D4D52D0943DE, ___value___2)); }
+	inline int32_t get_value___2() const { return ___value___2; }
+	inline int32_t* get_address_of_value___2() { return &___value___2; }
+	inline void set_value___2(int32_t value)
+	{
+		___value___2 = value;
+	}
+};
+
+
 // UnityEngine.Profiling.Sampler
 struct  Sampler_t6BFBE2B578BC0C28F4A78C6EA545AB8A4C50C6A4  : public RuntimeObject
 {
@@ -12274,6 +12293,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Quaternion_Internal_ToEulerRad_Injected_
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Quaternion_AngleAxis_Injected_mFEA2ACDAAEEDCA27647FCB47B636F0D041147DD3 (float ___angle0, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___axis1, Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357 * ___ret2, const RuntimeMethod* method);
 // System.Void UnityEngine.Quaternion::LookRotation_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&,UnityEngine.Quaternion&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Quaternion_LookRotation_Injected_m59A46014572ACB8F5C8A377B773D12EACCB53D4A (Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___forward0, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___upwards1, Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357 * ___ret2, const RuntimeMethod* method);
+// UnityEngine.Vector3 UnityEngine.Vector3::get_up()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  Vector3_get_up_m6309EBC4E42D6D0B3D28056BD23D0331275306F7 (const RuntimeMethod* method);
+// UnityEngine.Quaternion UnityEngine.Quaternion::LookRotation(UnityEngine.Vector3,UnityEngine.Vector3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357  Quaternion_LookRotation_m7BED8FBB457FF073F183AC7962264E5110794672 (Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___forward0, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___upwards1, const RuntimeMethod* method);
 // System.Void UnityEngine.Quaternion::.ctor(System.Single,System.Single,System.Single,System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Quaternion__ctor_m7502F0C38E04C6DE24C965D1CAF278DDD02B9D61 (Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357 * __this, float ___x0, float ___y1, float ___z2, float ___w3, const RuntimeMethod* method);
 // System.Single UnityEngine.Quaternion::Dot(UnityEngine.Quaternion,UnityEngine.Quaternion)
@@ -12282,8 +12305,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Quaternion_Dot_m0C931CC8127C5461E5B8A85
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Quaternion_IsEqualUsingDot_mA5E0CF75CBB488E3EC55BE9397FC3C92439A0BEF (float ___dot0, const RuntimeMethod* method);
 // System.Boolean UnityEngine.Quaternion::op_Equality(UnityEngine.Quaternion,UnityEngine.Quaternion)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Quaternion_op_Equality_m0DBCE8FE48EEF2D7C79741E498BFFB984DF4956F (Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357  ___lhs0, Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357  ___rhs1, const RuntimeMethod* method);
-// UnityEngine.Quaternion UnityEngine.Quaternion::LookRotation(UnityEngine.Vector3,UnityEngine.Vector3)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357  Quaternion_LookRotation_m7BED8FBB457FF073F183AC7962264E5110794672 (Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___forward0, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___upwards1, const RuntimeMethod* method);
 // System.Void UnityEngine.Quaternion::SetLookRotation(UnityEngine.Vector3,UnityEngine.Vector3)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Quaternion_SetLookRotation_mDB3D5A8083E5AB5881FA9CC1EACFC196F61B8204 (Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357 * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___view0, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___up1, const RuntimeMethod* method);
 // UnityEngine.Vector3 UnityEngine.Quaternion::Internal_ToEulerRad(UnityEngine.Quaternion)
@@ -12310,6 +12331,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Quaternion_Equals_m099618C36B86DC63B2E7C
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Single_Equals_mCDFA927E712FBA83D076864E16C77E39A6E66FE7 (float* __this, float ___obj0, const RuntimeMethod* method);
 // System.String UnityEngine.Quaternion::ToString()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Quaternion_ToString_m38DF4A1C05A91331D0A208F45CE74AF005AB463D (Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357 * __this, const RuntimeMethod* method);
+// System.Int32 UnityEngine.Random::RandomRangeInt(System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Random_RandomRangeInt_m4D223ACEC78BCC435D90A7D3696775DE973D324E (int32_t ___min0, int32_t ___max1, const RuntimeMethod* method);
 // System.Void UnityEngine.PropertyAttribute::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PropertyAttribute__ctor_m7F5C473F39D5601486C1127DA0D52F2DC293FC35 (PropertyAttribute_t25BFFC093C9C96E3CCF4EAB36F5DC6F937B1FA54 * __this, const RuntimeMethod* method);
 // System.Int32 UnityEngine.RangeInt::get_end()
@@ -18793,6 +18816,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PreloadData_PreloadDataDontStripMe_m68DF
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 // System.Void UnityEngine.Profiling.CustomSampler::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CustomSampler__ctor_m6AF8A65CE6483316530AC812D0A3904DD30BE426 (CustomSampler_tD50B25148FC97E173885F9C379C8F89F067343C8 * __this, const RuntimeMethod* method)
 {
@@ -19809,6 +19840,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F
 		return L_0;
 	}
 }
+// UnityEngine.Quaternion UnityEngine.Quaternion::LookRotation(UnityEngine.Vector3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357  Quaternion_LookRotation_m465C08262650385D02ADDE78C9791AED47D2155F (Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___forward0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Quaternion_LookRotation_m465C08262650385D02ADDE78C9791AED47D2155F_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357  V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_0 = ___forward0;
+		IL2CPP_RUNTIME_CLASS_INIT(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720_il2cpp_TypeInfo_var);
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_1 = Vector3_get_up_m6309EBC4E42D6D0B3D28056BD23D0331275306F7(/*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357_il2cpp_TypeInfo_var);
+		Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357  L_2 = Quaternion_LookRotation_m7BED8FBB457FF073F183AC7962264E5110794672(L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357  L_3 = V_0;
+		return L_3;
+	}
+}
 // System.Void UnityEngine.Quaternion::.ctor(System.Single,System.Single,System.Single,System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Quaternion__ctor_m7502F0C38E04C6DE24C965D1CAF278DDD02B9D61 (Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357 * __this, float ___x0, float ___y1, float ___z2, float ___w3, const RuntimeMethod* method)
 {
@@ -20688,6 +20746,34 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Random_Range_m2844A4A71C86BDF83A12D97FC
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Random_Range_m2844A4A71C86BDF83A12D97FC6DD95278E87E384_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Random::Range(System.Single,System.Single)");
 	float retVal = _il2cpp_icall_func(___min0, ___max1);
+	return retVal;
+}
+// System.Int32 UnityEngine.Random::Range(System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Random_Range_mD0C8F37FF3CAB1D87AAA6C45130BD59626BD6780 (int32_t ___min0, int32_t ___max1, const RuntimeMethod* method)
+{
+	int32_t V_0 = 0;
+	{
+		int32_t L_0 = ___min0;
+		int32_t L_1 = ___max1;
+		int32_t L_2 = Random_RandomRangeInt_m4D223ACEC78BCC435D90A7D3696775DE973D324E(L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_000b;
+	}
+
+IL_000b:
+	{
+		int32_t L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Int32 UnityEngine.Random::RandomRangeInt(System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Random_RandomRangeInt_m4D223ACEC78BCC435D90A7D3696775DE973D324E (int32_t ___min0, int32_t ___max1, const RuntimeMethod* method)
+{
+	typedef int32_t (*Random_RandomRangeInt_m4D223ACEC78BCC435D90A7D3696775DE973D324E_ftn) (int32_t, int32_t);
+	static Random_RandomRangeInt_m4D223ACEC78BCC435D90A7D3696775DE973D324E_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Random_RandomRangeInt_m4D223ACEC78BCC435D90A7D3696775DE973D324E_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Random::RandomRangeInt(System.Int32,System.Int32)");
+	int32_t retVal = _il2cpp_icall_func(___min0, ___max1);
 	return retVal;
 }
 // System.Single UnityEngine.Random::get_value()

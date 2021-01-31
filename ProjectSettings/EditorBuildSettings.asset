@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 0f04bf6a2e161774c93635a4189e4719
   - enabled: 1
-    path: Assets/Scenes/BarziumScene.unity
-    guid: a6f3afcb024fee24aa48d7677c57605e
-  - enabled: 1
     path: Assets/Scenes/GuideMainScene.unity
     guid: debf131ce92d70d488de7b2cbab5e86f
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: 9259ec5d6322be54a8316a4b3d211949
   m_configObjects: {}

@@ -254,6 +254,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Tree
       objectReference: {fileID: 0}
+    - target: {fileID: 6156668353493661677, guid: 3bb5cd51a2f9015408428f87363339b3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6499719180970217063, guid: 3bb5cd51a2f9015408428f87363339b3,
         type: 3}
       propertyPath: m_TagString

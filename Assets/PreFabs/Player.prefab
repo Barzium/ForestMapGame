@@ -10009,7 +10009,7 @@ MonoBehaviour:
   anim: {fileID: 1226804962}
   sr: {fileID: 1226804963}
   lightTorch: {fileID: 1348820879}
-  MaxTime: 300
+  MaxTime: 1200
   StartTimeBeforeConsumption: 5
   deathPanel: {fileID: 0}
 --- !u!1 &634881141556191694

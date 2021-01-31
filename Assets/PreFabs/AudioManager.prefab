@@ -204,7 +204,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f50a964aef6295d41b04826fc1008eb6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -637,8 +637,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 77acf127b3597dd42ae8f5325c7ce39a, type: 3}
   - {fileID: 8300000, guid: 6774d6574b2bee540b8a1f406de09357, type: 3}
   - {fileID: 8300000, guid: 5eda17dfc20350841a3ad3007f896f18, type: 3}
-  isMoving: 0
-  isRunning: 0
 --- !u!82 &3452567135441189902
 AudioSource:
   m_ObjectHideFlags: 0

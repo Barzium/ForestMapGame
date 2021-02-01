@@ -2794,7 +2794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 634881141902003345, guid: fc321af434de3124da3dec8baeb8e583, type: 3}
-  spawnPoint: {x: 59.3, y: 3.75, z: 61}
+  spawnPoint: {x: 61.8, y: 1, z: 66}
   redEyes: {fileID: 1463790396}
   plyrctrl: {fileID: 0}
   timeManager: {fileID: 0}

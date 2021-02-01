@@ -10,9 +10,9 @@ public class PlayerSpawner : MonoBehaviour
 
     [SerializeField] GameObject player;
 
-    [SerializeField] Vector3 spawnPoint = new Vector3(59.3f,3.75f,61f);
+    [SerializeField] Vector3 spawnPoint = new Vector3(61.8f, 1.75f, 66f);
 
-   [SerializeField] RedEyesManager redEyes;
+    [SerializeField] RedEyesManager redEyes;
     [SerializeField] PlayerController plyrctrl;
     [SerializeField] TimeManager timeManager;
 
@@ -21,8 +21,8 @@ public class PlayerSpawner : MonoBehaviour
     public void InitAll() {
 
 
-        Instantiate(player, spawnPoint, Quaternion.identity);
-       plyrctrl = PlayerController.GetInstance;
+        Instantiate(player, spawnPoint, Quaternion.AngleAxis(200,Vector3.up));
+        plyrctrl = PlayerController.GetInstance;
         plyrctrl.RestartPosition(spawnPoint);
         timeManager= TimeManager._instance;
        

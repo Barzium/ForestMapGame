@@ -93,7 +93,7 @@ public class MapManager : MonoBehaviour
                             Debug.LogErrorFormat("Illegal emptyPrefab index {0}", emptyPrefabsIndex);
                             emptyPrefabsIndex = 0;
                         }
-                        chunk_prefab = emptyChunkPrefabs[emptyPrefabsIndex];
+                        chunk_prefab = shuffledEmptyPrefabs[emptyPrefabsIndex];
                         emptyPrefabsIndex++;
                     }
                 }

@@ -1,12 +1,13 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class CodeHandler : MonoBehaviour
 {
     static CodeHandler _instance;
     [SerializeField] InputButton[] btns;
-    int[] playersInput = new int[3];
+    List<int> playersInput = new List<int>();
     int[] password;
-    int currentInsert = 0;
     private void Awake()
     {
         _instance = this;
@@ -15,11 +16,14 @@ public class CodeHandler : MonoBehaviour
 
     public void CheckPassword()
     {
-        bool checkAnswer = true;
-        for (int i = 0; i < playersInput.Length; i++)
+        if (playersInput.Count != password.Length)
         {
-            checkAnswer &= playersInput[i] == password[i];
-            if (!checkAnswer)
+            WrongPassword();
+            return;
+        }
+        for (int i = 0; i < playersInput.Count; i++)
+        {
+            if (playersInput[i] != password[i])
             {
                 WrongPassword();
                 return;
@@ -29,12 +33,9 @@ public class CodeHandler : MonoBehaviour
     }
 
 
-    void ResetPassword() {
-
-        for (int i = 0; i < playersInput.Length; i++)
-            playersInput[i] = 0;
-
-        currentInsert = 0;
+    void ResetPassword() 
+    {
+        playersInput.Clear();
     }
 
     void WrongPassword() {
@@ -47,6 +48,8 @@ public class CodeHandler : MonoBehaviour
     void CorrectPassword() {
         Debug.Log("Correct Answer");
         ShowAnswer(true);
+        ResetPassword();
+        //WinGame();
     }
 
    public  void RegisterPassword(int[] psw) {
@@ -72,21 +75,16 @@ public class CodeHandler : MonoBehaviour
             return;
         }
 
-
-        playersInput[currentInsert] = input;
-        currentInsert++;
-
-        if (currentInsert >= password.Length - 1)
-            currentInsert = password.Length - 1;
+        playersInput.Add(input);
 
         PrintDebug();
     }
     
-    public void PrintDebug() {
-
-        Debug.Log(string.Format("The Password is {0}, {1} , {2}", password[0], password[1], password[2]));
-        Debug.Log(string.Format("The player input is {0}, {1} , {2} ", playersInput[0], playersInput[1], playersInput[2]));
-        Debug.Log(currentInsert);
+    public void PrintDebug() 
+    {
+        /*Debug.Log(string.Format("The Password is {0}, {1} , {2}", password[0], password[1], password[2]));
+        Debug.Log(string.Format("The player input is {0}", playersInput.ToString()));
+        Debug.Log(playersInput.Count);*/
     }
 
 

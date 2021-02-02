@@ -4,8 +4,8 @@ public class CodeHandler : MonoBehaviour
 {
     static CodeHandler _instance;
     [SerializeField] InputButton[] btns;
-   [SerializeField] int[] playersInput = new int[3];
-   [SerializeField] int[] password ;
+    int[] playersInput = new int[3];
+    int[] password;
     int currentInsert = 0;
     private void Awake()
     {
@@ -68,7 +68,7 @@ public class CodeHandler : MonoBehaviour
         }
         else if (input == 12)
         { 
-        ResetPassword();
+            ResetPassword();
             return;
         }
 

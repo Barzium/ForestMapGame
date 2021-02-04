@@ -22,8 +22,8 @@ public class PlayerSpawner : MonoBehaviour
 
 
         Instantiate(player, spawnPoint, Quaternion.AngleAxis(200,Vector3.up));
-        plyrctrl = PlayerController.GetInstance;
-        plyrctrl.RestartPosition(spawnPoint);
+        //plyrctrl = PlayerController.GetInstance;
+        //plyrctrl.RestartPosition(spawnPoint);
         timeManager= TimeManager._instance;
        
         timeManager.RestartSetting();

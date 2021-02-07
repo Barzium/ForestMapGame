@@ -12,7 +12,7 @@ public class TimeManager : MonoBehaviour
     [SerializeField] Light lightTorch;
     [SerializeField] float MaxTime, StartTimeBeforeConsumption;
     [SerializeField] Image deathPanel;
-    float lowestPoint = 0.16f;
+    float lowestPoint = 0.03f;
     Vector3 startPos = new Vector3();
     public static bool isDead = false;
     private void Awake()
@@ -23,11 +23,11 @@ public class TimeManager : MonoBehaviour
     float endY;
     IEnumerator Melting()
     {
-        yield return new WaitForSeconds(StartTimeBeforeConsumption);
+        //yield return new WaitForSeconds(StartTimeBeforeConsumption);
 
-        endY = candle.position.y - lowestPoint;
+        endY = candle.localPosition.y - lowestPoint;
 
-        LeanTween.moveY(candle.gameObject, endY, MaxTime);
+        LeanTween.moveLocalY(candle.gameObject, endY, MaxTime);
 
         yield return new WaitForSeconds(MaxTime);
         Death();

@@ -15,12 +15,11 @@ public class MapTileController : MonoBehaviour
     bool insideBoard => !(transform.localPosition.x < -4.5f || transform.localPosition.x > 3.5f || transform.localPosition.y < -4.5f || transform.localPosition.y > 3.5f);
     float dragStartTime;
     Vector2 mouseDragStartPosition;
-    Vector3 dragStartPos;
     private BoardManager boardManager;
 
 
     private Vector2 cameraRealSize;
-    private Vector2 posBeforeZoom;
+    private Vector3 posBeforeZoom;
     private Vector2 GetCameraRealSize {
         get {
             if (cameraRealSize == Vector2.zero)
@@ -38,12 +37,13 @@ public class MapTileController : MonoBehaviour
     // Update is called once per frame
     void Update() {
         if (beingHeld && canBeDragged) {
-            transform.position = (Vector3)GetworldMousePosition() + Vector3.forward * transform.position.z;
-            SetHighlight(boardManager.CheckDiscard(transform.position));
+            SetHighlight(boardManager.CheckDiscard(transform.position) && discardable);
             if (!wasMoved && (Time.time - dragStartTime) >= minimumDragTime)
                 wasMoved = true;
-            else if (!wasMoved && Vector2.Distance(transform.position, dragStartPos) >= minimumDragDistance)
+            else if (!wasMoved && Vector2.Distance(GetworldMousePosition(), mouseDragStartPosition) >= minimumDragDistance)
                 wasMoved = true;
+            if(wasMoved)
+                transform.position = (Vector3)GetworldMousePosition() + Vector3.forward * transform.position.z;
             if (wasMoved && insideBoard)
                 transform.localPosition = new Vector3(Mathf.Round(transform.localPosition.x), Mathf.Round(transform.localPosition.y), transform.localPosition.z);
         }
@@ -70,7 +70,7 @@ public class MapTileController : MonoBehaviour
     }
 
     public void StartDrag() {
-        dragStartPos = transform.position;
+        mouseDragStartPosition = (Vector3)GetworldMousePosition();
         dragStartTime = Time.time;
         beingHeld = true;
         wasMoved = false;
@@ -84,8 +84,10 @@ public class MapTileController : MonoBehaviour
         beingHeld = false;
         if (insideBoard)
             boardManager.PlaySnapSound();
+
         if (highlighted)
             Destroy(gameObject);
+        Debug.Log("!wasMoved: " + !wasMoved + ", zoomable: " + zoomable + ", !isRotating: " + !isRotating + ", !aTileIsZoomed: " + !aTileIsZoomed + ", !isZoomed: " + !isZoomed);
         if (!wasMoved && zoomable && !isRotating && !aTileIsZoomed && !isZoomed)
             ZoomIn();
     }
@@ -95,7 +97,7 @@ public class MapTileController : MonoBehaviour
         aTileIsZoomed = true;
         posBeforeZoom = transform.localPosition;
         if (insideBoard)
-            posBeforeZoom = Vector2Int.RoundToInt(posBeforeZoom);
+            posBeforeZoom = Vector3Int.RoundToInt(posBeforeZoom);
         LTDescr rotationLean = LeanTween.rotate(gameObject, transform.rotation.eulerAngles + Vector3.up * 180, zoomTime);
         LeanTween.scale(gameObject, transform.localScale * GetCameraRealSize.y * (1 - screenOffset), zoomTime);
         LeanTween.move(gameObject, new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, Camera.main.nearClipPlane), zoomTime).setEaseOutSine();

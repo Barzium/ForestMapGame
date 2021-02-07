@@ -5,6 +5,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private float minimumDragDistance;
     [SerializeField] private GameObject tilePrefab;
     [SerializeField] private float discardDistance;
+    [SerializeField] private float zPos;
 
     bool beingHeld = false, wasMoved = false, highlighted = false;
     Vector3 dragStartPos;
@@ -48,7 +49,7 @@ public class Spawner : MonoBehaviour
         if (beingHeld && !wasMoved && Vector2.Distance(GetworldMousePosition(), dragStartPos) >= minimumDragDistance) {
             wasMoved = true;
             Vector3 pos = GetworldMousePosition();
-            pos.z = transform.position.z;
+            pos.z = zPos;
             var tile = Instantiate(tilePrefab, pos, Quaternion.identity, transform.parent);
             tile.GetComponent<MapTileController>().StartDrag();
         }

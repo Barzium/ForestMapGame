@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -148,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4534727}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.96, y: 4.4, z: 4}
+  m_LocalPosition: {x: -1.96, y: 4.4, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 517572070}
@@ -171,6 +171,7 @@ MonoBehaviour:
   tilePrefab: {fileID: 4370419903800306940, guid: 363ed27288e296044b1be940a3c27f18,
     type: 3}
   discardDistance: 0.5
+  zPos: 4
 --- !u!65 &4534730
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -616,7 +617,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164318089}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.46000004, y: 4.4, z: 4}
+  m_LocalPosition: {x: -0.46000004, y: 4.4, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 861940976}
@@ -639,6 +640,7 @@ MonoBehaviour:
   tilePrefab: {fileID: 4370419903800306940, guid: bf58d3bffa8aedf42959525250731951,
     type: 3}
   discardDistance: 0.5
+  zPos: 4
 --- !u!65 &164318092
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1147,7 +1149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533977454}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.04, y: 4.4, z: 4}
+  m_LocalPosition: {x: 4.04, y: 4.4, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 934380546}
@@ -1170,6 +1172,7 @@ MonoBehaviour:
   tilePrefab: {fileID: 4370419903800306940, guid: 4e11b97346d8d5f4d9f63d97f3738ffc,
     type: 3}
   discardDistance: 0.5
+  zPos: 4
 --- !u!65 &533977457
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1260,7 +1263,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590557090}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.46, y: 4.4, z: 4}
+  m_LocalPosition: {x: -3.46, y: 4.4, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 78998845}
@@ -1283,6 +1286,7 @@ MonoBehaviour:
   tilePrefab: {fileID: 4370419903800306940, guid: 01085ad6686e49c40986ccbf6f1f9bb3,
     type: 3}
   discardDistance: 0.5
+  zPos: 4
 --- !u!65 &590557093
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2232,7 +2236,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341958785}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.54, y: 4.4, z: 4}
+  m_LocalPosition: {x: 2.54, y: 4.4, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 17649691}
@@ -2255,6 +2259,7 @@ MonoBehaviour:
   tilePrefab: {fileID: 4370419903800306940, guid: 9ed0ff8d35a085d4bad48146b5da6d90,
     type: 3}
   discardDistance: 0.5
+  zPos: 4
 --- !u!65 &1341958788
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2493,7 +2498,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753100605}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.04, y: 4.4, z: 4}
+  m_LocalPosition: {x: 1.04, y: 4.4, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 611026053}
@@ -2516,6 +2521,7 @@ MonoBehaviour:
   tilePrefab: {fileID: 4370419903800306940, guid: f29ea4910b9f5634f8c2627a23134b82,
     type: 3}
   discardDistance: 0.5
+  zPos: 4
 --- !u!65 &1753100608
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2966,7 +2972,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4370419904796606854}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.96, y: 4.4, z: 4}
+  m_LocalPosition: {x: -4.96, y: 4.4, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 198096035}
@@ -3058,3 +3064,4 @@ MonoBehaviour:
   tilePrefab: {fileID: 4370419903800306940, guid: 8096e0bff08593747998f313eedfb741,
     type: 3}
   discardDistance: 0.5
+  zPos: 4

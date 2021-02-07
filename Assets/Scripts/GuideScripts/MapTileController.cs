@@ -18,18 +18,11 @@ public class MapTileController : MonoBehaviour
     private BoardManager boardManager;
 
 
-    private Vector2 cameraRealSize;
+    private Vector2 cameraRealSize => new Vector2(Camera.main.orthographicSize * 2 * Camera.main.aspect, Camera.main.orthographicSize * 2);
     private Vector3 posBeforeZoom;
-    private Vector2 GetCameraRealSize {
-        get {
-            if (cameraRealSize == Vector2.zero)
-                cameraRealSize = new Vector2(Camera.main.orthographicSize * 2 * Camera.main.aspect, Camera.main.orthographicSize * 2);
-            return cameraRealSize;
-        }
-    }
+    private Vector3 GetCamCornerPosition => new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, 0) - (Vector3)cameraRealSize / 2;
     private Vector2 GetworldMousePosition()
         => Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    private Vector3 GetCamCornerPosition => new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, 0) - (Vector3)GetCameraRealSize / 2;
 
     private void Start() {
         boardManager = BoardManager._instance;
@@ -99,7 +92,7 @@ public class MapTileController : MonoBehaviour
         if (insideBoard)
             posBeforeZoom = Vector3Int.RoundToInt(posBeforeZoom);
         LTDescr rotationLean = LeanTween.rotate(gameObject, transform.rotation.eulerAngles + Vector3.up * 180, zoomTime);
-        LeanTween.scale(gameObject, transform.localScale * GetCameraRealSize.y * (1 - screenOffset), zoomTime);
+        LeanTween.scale(gameObject, transform.localScale * Camera.main.orthographicSize * 2 * (1 - screenOffset), zoomTime);
         LeanTween.move(gameObject, new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, Camera.main.nearClipPlane), zoomTime).setEaseOutSine();
         rotationLean.setOnComplete(() => {
             isRotating = false;
